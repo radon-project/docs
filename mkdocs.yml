@@ -43,7 +43,7 @@ theme:
 extra:
   analytics:
     provider: google
-    property: G-EQVZ8DQMSF
+    property: G-KJJTKMQBZE
 
   social:
     - icon: fontawesome/brands/github-alt
