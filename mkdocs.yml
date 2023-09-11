@@ -1,5 +1,5 @@
-site_name: Radon
-site_description: "Radon a programming language"
+site_name: The Radon Programming Language
+site_description: "The Radon Programming Language"
 site_author: "Md. Almas Ali"
 site_url: "https://radon-project.github.io/"
 repo_url: "https://github.com/radon-project/radon"
@@ -13,7 +13,7 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: indego
       accent: amber
       toggle:
         icon: material/lightbulb-outline
@@ -21,7 +21,7 @@ theme:
 
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: indego
       accent: amber
       toggle:
         icon: material/lightbulb
@@ -37,13 +37,13 @@ theme:
     - navigation.path
     - navigation.top
 
-  logo: "assets/images/logo.png"
+  logo: "assets/images/radon.png"
   favicon: "assets/images/favicon.ico"
 
 extra:
   analytics:
     provider: google
-    property: 
+    property: G-EQVZ8DQMSF
 
   social:
     - icon: fontawesome/brands/github-alt
@@ -52,11 +52,46 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/md-almasali/
 
-    - icon: fontawesome/brands/dev
-      link: https://dev.to/almasali
-
     - icon: fontawesome/solid/globe
       link: https://almasali.net
+
+  meta:
+    - name: description
+      content: "Radon a programming language"
+    - name: keywords
+      content: "radon, radon programming language, radon language, radon-lang"
+    - name: author
+      content: "Md. Almas Ali"
+    - name: og:title
+      content: "Radon"
+    - name: og:description
+      content: "Radon a programming language"
+    - name: og:image
+      content: "assets/images/radon.png"
+    - name: og:url
+      content: "https://radon-project.github.io/"
+    - name: og:site_name
+      content: "Radon"
+    - name: og:locale
+      content: "en_US"
+    - name: og:type
+      content: "website"
+    - name: twitter:card
+      content: "summary"
+    - name: twitter:site
+      content: "@radon-project"
+    - name: twitter:creator
+      content: "@almasali22"
+    - name: twitter:title
+      content: "Radon"
+    - name: twitter:description
+      content: "The Radon Programming Language"
+    - name: twitter:image
+      content: "assets/images/radon.png"
+    - name: twitter:image:alt
+      content: "Radon"
+    - name: twitter:url
+      content: "https://radon-project.github.io/"
 
   generator: false
 
@@ -69,7 +104,24 @@ nav:
   - Overview: index.md
   - Installation: installation.md
   - Quick Start: quick-start.md
-  - Blog: blog/index.md
+  - Documentation:
+      - Data Types: data-types.md
+      - Control Flow: control-flow.md
+      - Functions: functions.md
+      - Classes: classes.md
+      - Modules: modules.md
+      - Input/Output: input-output.md
+      # - Exceptions: exceptions.md
+      # - File Handling: file-handling.md
+      - Strings: strings.md
+      - Arrays: arrays.md
+      - Built-in Functions: built-in-functions.md
+
+      - Language Reference: language-reference.md
+      - Standard Library: standard-library.md
+      - Tools: tools.md
+  - Blog:
+      Hello World: blog/hello-world.md
   - Contribution: contribution.md
 
 markdown_extensions:
@@ -97,3 +149,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css

@@ -1,0 +1,9 @@
+a[title=Website] {
+    display: flex;
+    justify-content: center;
+}
+
+a[title=Website] img {
+    height: 250px;
+    width: 250px;
+}
