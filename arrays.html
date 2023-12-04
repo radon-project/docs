@@ -12,20 +12,20 @@
         <meta name="author" content="Md. Almas Ali">
       
       
-        <link rel="canonical" href="https://radon-project.github.io/input-output.html">
+        <link rel="canonical" href="https://radon-project.github.io/arrays.html">
       
       
-        <link rel="prev" href="modules.html">
+        <link rel="prev" href="strings.html">
       
       
-        <link rel="next" href="strings.html">
+        <link rel="next" href="built-in-functions.html">
       
       <link rel="icon" href="assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Input/Output - The Radon Programming Language</title>
+        <title>Arrays - The Radon Programming Language</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-output" class="md-skip">
+        <a href="#arrays" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Input/Output
+              Arrays
             
           </span>
         </div>
@@ -416,59 +416,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Input/Output
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="input-output.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="input-output.html" class="md-nav__link">
         Input/Output
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#printing-to-the-console" class="md-nav__link">
-    Printing to the console
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#input-from-the-console" class="md-nav__link">
-    Input from the console
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -492,11 +444,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="arrays.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Arrays
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="arrays.html" class="md-nav__link md-nav__link--active">
         Arrays
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#array-methods" class="md-nav__link">
+    Array methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-operators-development" class="md-nav__link">
+    Array operators (Development)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-standard-library" class="md-nav__link">
+    Array standard library
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -655,15 +662,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#printing-to-the-console" class="md-nav__link">
-    Printing to the console
+  <a href="#array-methods" class="md-nav__link">
+    Array methods
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#input-from-the-console" class="md-nav__link">
-    Input from the console
+  <a href="#array-operators-development" class="md-nav__link">
+    Array operators (Development)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-standard-library" class="md-nav__link">
+    Array standard library
   </a>
   
 </li>
@@ -687,16 +701,126 @@
   
 
 
-<h1 id="input-output">Input Output<a class="headerlink" href="#input-output" title="Permanent link">&para;</a></h1>
-<h2 id="printing-to-the-console">Printing to the console<a class="headerlink" href="#printing-to-the-console" title="Permanent link">&para;</a></h2>
-<p>In Radon, we can print to the console using the <code>print</code> function. It is followed by the argument in parentheses. The argument are mandatory. It takes only one argument. We can concatenate data types using the <code>+</code> operator.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">print.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="s2">&quot;World!&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, World!</span>
+<h1 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h1>
+<h2 id="array-methods">Array methods<a class="headerlink" href="#array-methods" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>arr_len()</code> - returns the length of the array</li>
+<li><code>arr_push(array, item)</code> - adds an item to the end of the array</li>
+<li><code>arr_pop(array, index)</code> - removes an item from the end of the array</li>
+<li><code>arr_append(array, item)</code> - adds an item to the end of the array</li>
+<li><code>arr_extend(array1, array2)</code> - adds all the items of an array to the end of the array</li>
+<li><code>arr_find(array, index)</code> - returns the item at the specified index</li>
+<li><code>arr_slice(array, start, end)</code> - returns the items from the specified start index to the specified end index</li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">methods.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">var</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr_len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span> <span class="c1"># 5</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">arr_push</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">arr_pop</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 4, 5]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">arr_append</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">arr_extend</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr_find</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="c1"># 1</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr_find</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># 2</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr_slice</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># [1, 2, 3, 4, 5]</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="input-from-the-console">Input from the console<a class="headerlink" href="#input-from-the-console" title="Permanent link">&para;</a></h2>
-<p>In Radon, we can take input from the console using the <code>input</code> function. It is followed by the argument in parentheses. The argument are mandatory. It takes only one argument. We can concatenate data types using the <code>+</code> operator.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">input.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">var</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name: &quot;</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, World!</span>
+<h2 id="array-operators-development">Array operators (Development)<a class="headerlink" href="#array-operators-development" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>+</code> (concatenation)</li>
+<li><code>*</code> (repetition)</li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">operators.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">var</span> <span class="n">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">var</span> <span class="n">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr1</span> <span class="o">+</span> <span class="n">arr2</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr1</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># [1, 2, 3, 1, 2, 3]</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="array-standard-library">Array standard library<a class="headerlink" href="#array-standard-library" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>map(func)</code> - returns a new array with the result of calling the specified function on each item of the array</li>
+<li><code>append(item)</code> - adds an item to the end of the array</li>
+<li><code>pop(index)</code> - removes an item from the end of the array</li>
+<li><code>extend(list)</code> - adds all the items of an array to the end of the array</li>
+<li><code>find(index)</code> - returns the item at the specified index</li>
+<li><code>slice(start, end)</code> - returns the items from the specified start index to the specified end index</li>
+<li><code>len()</code> - returns the length of the array</li>
+<li><code>is_empty()</code> - returns <code>true</code> if the array is empty, otherwise <code>false</code></li>
+<li><code>to_string()</code> - returns the string representation of the array</li>
+<li><code>is_array()</code> - returns <code>true</code> if the value is an array, otherwise <code>false</code></li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">array-standard-library.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">include</span> <span class="n">Array</span> <span class="c1"># Include the Array standard library</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1"># Create an array instance using the Array class</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">var</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">Array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">len</span><span class="p">())</span> <span class="c1"># 5</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">is_empty</span><span class="p">())</span> <span class="c1"># false</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span> <span class="c1"># &quot;[1, 2, 3, 4, 5]&quot;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">is_array</span><span class="p">())</span> <span class="c1"># true</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fun</span> <span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="p">}))</span> <span class="c1"># [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span> <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># [1, 2, 3, 4, 5]</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]))</span> <span class="c1"># [1, 2, 3, 4, 5, 6, 7, 8]</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># 1</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># 2</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># [1, 2, 3, 4, 5]</span>
 </span></code></pre></div></td></tr></table></div>
 
 

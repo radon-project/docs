@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://radon-project.github.io/built-in-functions.html">
       
       
-        <link rel="prev" href="input-output.html">
+        <link rel="prev" href="arrays.html">
       
       
-        <link rel="next" href="standard-library.html">
+        <link rel="next" href="language-reference.html">
       
       <link rel="icon" href="assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
@@ -432,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="strings.md" class="md-nav__link">
+      <a href="strings.html" class="md-nav__link">
         Strings
       </a>
     </li>
@@ -446,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="arrays.md" class="md-nav__link">
+      <a href="arrays.html" class="md-nav__link">
         Arrays
       </a>
     </li>
@@ -584,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="language-reference.md" class="md-nav__link">
+      <a href="language-reference.html" class="md-nav__link">
         Language Reference
       </a>
     </li>
@@ -612,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tools.md" class="md-nav__link">
+      <a href="tools.html" class="md-nav__link">
         Tools
       </a>
     </li>
@@ -816,62 +816,62 @@
 <p>Built-in functions are the functions that are built into the language. They are used to perform common tasks. In Radon, there are a list of built-in functions that are available to use. They are:</p>
 <h3 id="utility-methods">Utility methods<a class="headerlink" href="#utility-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>cls()</code></li>
-<li><code>clear()</code></li>
-<li><code>exit()</code></li>
+<li><code>cls()</code> - clears the screen</li>
+<li><code>clear()</code> - clears the screen</li>
+<li><code>exit()</code> - exits the program</li>
 </ul>
 <h3 id="same-as-include-statement">same as include statement<a class="headerlink" href="#same-as-include-statement" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>require()</code></li>
+<li><code>require()</code> - same as include statement to include a file or library in the current program</li>
 </ul>
 <h3 id="command-line-arguments">Command line arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>sys_args()</code></li>
+<li><code>sys_args()</code> - returns the command line arguments</li>
 </ul>
 <h3 id="api-methods">API methods<a class="headerlink" href="#api-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>pyapi(string)</code></li>
+<li><code>pyapi(string)</code> - A high-level Python API for Radon. It is used to call Python functions from Radon. (Development)</li>
 </ul>
 <h3 id="typecase-methods">Typecase methods<a class="headerlink" href="#typecase-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>int()</code></li>
-<li><code>float()</code></li>
-<li><code>str()</code></li>
-<li><code>bool()</code></li>
-<li><code>type()</code></li>
+<li><code>int()</code> - converts any value to an integer</li>
+<li><code>float()</code> - converts any value to a float</li>
+<li><code>str()</code> - converts any value to a string</li>
+<li><code>bool()</code> - converts any value to a boolean</li>
+<li><code>type()</code> - returns the type of the value</li>
 </ul>
 <h3 id="type-checker-methods">Type checker methods<a class="headerlink" href="#type-checker-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>is_num()</code></li>
-<li><code>is_int()</code></li>
-<li><code>is_float()</code></li>
-<li><code>is_str()</code></li>
-<li><code>is_bool()</code></li>
-<li><code>is_array()</code></li>
-<li><code>is_fun()</code></li>
+<li><code>is_num()</code> - returns <code>true</code> if the value is a number, otherwise <code>false</code></li>
+<li><code>is_int()</code> - returns <code>true</code> if the value is an integer, otherwise <code>false</code></li>
+<li><code>is_float()</code> - returns <code>true</code> if the value is a float, otherwise <code>false</code></li>
+<li><code>is_str()</code> - returns <code>true</code> if the value is a string, otherwise <code>false</code></li>
+<li><code>is_bool()</code> - returns <code>true</code> if the value is a boolean, otherwise <code>false</code></li>
+<li><code>is_array()</code> - returns <code>true</code> if the value is an array, otherwise <code>false</code></li>
+<li><code>is_fun()</code> - returns <code>true</code> if the value is a function, otherwise <code>false</code></li>
 </ul>
 <h3 id="string-methods">String methods<a class="headerlink" href="#string-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>str_len()</code></li>
-<li><code>str_find(string, index)</code></li>
-<li><code>str_slice(string, start, end)</code></li>
+<li><code>str_len()</code> - returns the length of the string</li>
+<li><code>str_find(string, index)</code> - returns the character at the specified index</li>
+<li><code>str_slice(string, start, end)</code> - returns the substring from the specified start index to the specified end index</li>
 </ul>
 <h3 id="io-methods">I/O methods<a class="headerlink" href="#io-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>print()</code></li>
-<li><code>print_ret()</code></li>
-<li><code>input()</code></li>
-<li><code>input_int()</code></li>
+<li><code>print()</code> - prints the specified value to the console</li>
+<li><code>print_ret()</code> - prints the specified value to the console and returns the value</li>
+<li><code>input()</code> - reads a line from the console</li>
+<li><code>input_int()</code> - reads an integer from the console</li>
 </ul>
 <h3 id="array-methods">Array methods<a class="headerlink" href="#array-methods" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>arr_len()</code></li>
-<li><code>arr_push(array, item)</code></li>
-<li><code>arr_pop(array, index)</code></li>
-<li><code>arr_append(array, item)</code></li>
-<li><code>arr_extend(array1, array2)</code></li>
-<li><code>arr_find(array, index)</code></li>
-<li><code>arr_slice(array, start, end)</code></li>
+<li><code>arr_len()</code> - returns the length of the array</li>
+<li><code>arr_push(array, item)</code> - adds an item to the end of the array</li>
+<li><code>arr_pop(array, index)</code> - removes an item from the end of the array</li>
+<li><code>arr_append(array, item)</code> - adds an item to the end of the array</li>
+<li><code>arr_extend(array1, array2)</code> - adds all the items of an array to the end of the array</li>
+<li><code>arr_find(array, index)</code> - returns the item at the specified index</li>
+<li><code>arr_slice(array, start, end)</code> - returns the items from the specified start index to the specified end index</li>
 </ul>
 
 
