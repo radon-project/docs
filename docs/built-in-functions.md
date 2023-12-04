@@ -6,59 +6,59 @@ Built-in functions are the functions that are built into the language. They are 
 
 ### Utility methods
 
-- `cls()`
-- `clear()`
-- `exit()`
+- `cls()` - clears the screen
+- `clear()` - clears the screen
+- `exit()` - exits the program
 
 ### same as include statement
 
-- `require()`
+- `require()` - same as include statement to include a file or library in the current program
 
 ### Command line arguments
 
-- `sys_args()`
+- `sys_args()` - returns the command line arguments
 
 ### API methods
 
-- `pyapi(string)`
+- `pyapi(string)` - A high-level Python API for Radon. It is used to call Python functions from Radon. (Development)
 
 ### Typecase methods
 
-- `int()`
-- `float()`
-- `str()`
-- `bool()`
-- `type()`
+- `int()` - converts any value to an integer
+- `float()` - converts any value to a float
+- `str()` - converts any value to a string
+- `bool()` - converts any value to a boolean
+- `type()` - returns the type of the value
 
 ### Type checker methods
 
-- `is_num()`
-- `is_int()`
-- `is_float()`
-- `is_str()`
-- `is_bool()`
-- `is_array()`
-- `is_fun()`
+- `is_num()` - returns `true` if the value is a number, otherwise `false`
+- `is_int()` - returns `true` if the value is an integer, otherwise `false`
+- `is_float()` - returns `true` if the value is a float, otherwise `false`
+- `is_str()` - returns `true` if the value is a string, otherwise `false`
+- `is_bool()` - returns `true` if the value is a boolean, otherwise `false`
+- `is_array()` - returns `true` if the value is an array, otherwise `false`
+- `is_fun()` - returns `true` if the value is a function, otherwise `false`
 
 ### String methods
 
-- `str_len()`
-- `str_find(string, index)`
-- `str_slice(string, start, end)`
+- `str_len()` - returns the length of the string
+- `str_find(string, index)` - returns the character at the specified index
+- `str_slice(string, start, end)` - returns the substring from the specified start index to the specified end index
 
 ### I/O methods
 
-- `print()`
-- `print_ret()`
-- `input()`
-- `input_int()`
+- `print()` - prints the specified value to the console
+- `print_ret()` - prints the specified value to the console and returns the value
+- `input()` - reads a line from the console
+- `input_int()` - reads an integer from the console
 
 ### Array methods
 
-- `arr_len()`
-- `arr_push(array, item)`
-- `arr_pop(array, index)`
-- `arr_append(array, item)`
-- `arr_extend(array1, array2)`
-- `arr_find(array, index)`
-- `arr_slice(array, start, end)`
+- `arr_len()` - returns the length of the array
+- `arr_push(array, item)` - adds an item to the end of the array
+- `arr_pop(array, index)` - removes an item from the end of the array
+- `arr_append(array, item)` - adds an item to the end of the array
+- `arr_extend(array1, array2)` - adds all the items of an array to the end of the array
+- `arr_find(array, index)` - returns the item at the specified index
+- `arr_slice(array, start, end)` - returns the items from the specified start index to the specified end index
