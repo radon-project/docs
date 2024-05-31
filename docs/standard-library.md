@@ -1,6 +1,6 @@
 # Standard Library
 
-## List of Standard Libraries 
+## List of Standard Libraries
 
 ```text
 *
@@ -13,4 +13,4 @@
 │   └── Winlib.rn
 ```
 
-... and more to come! Under development. 
+... and more to come! Under development.

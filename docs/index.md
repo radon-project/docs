@@ -60,26 +60,26 @@ Some of the features of Radon include:
 # This is a Radon test file for the Radon Programming Language.
 
 class Network {
- fun Network(username, password) {
-  var this.username = username
-  var this.password = password
- }
+    fun __constructor__(username, password) {
+        this.username = username
+        this.password = password
+    }
 
- fun login() {
-  if this.username == "radon" {
-   if this.password == "password" {
-    print("Log in successful")
-   }
-  } else {
-   print("Invalid credentials")
-  }
- }
+    fun login() {
+        if this.username == "radon" {
+            if this.password == "password" {
+                print("Log in successful")
+            }
+        } else {
+            print("Invalid credentials")
+        }
+    }
 }
 
-var username = input("Enter you username: ")
-var password = input("Enter your password: ")
+username = input("Enter you username: ")
+password = input("Enter your password: ")
 
-var network = Network(username, password)
+network = Network(username, password)
 network.login()
 ```
 
