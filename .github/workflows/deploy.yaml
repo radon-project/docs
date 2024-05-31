@@ -28,11 +28,13 @@ jobs:
       - name: Check for changes in docs/ or mkdocs.yml
         id: check_changes
         run: |
-          git diff --name-only origin/master -- > changed_files.txt
-          if grep -qE '(^docs/|^mkdocs.yml)' changed_files.txt; then
-            echo "changes_detected=true" >> $GITHUB_ENV
-          else
+          if [ "$(git diff --quiet origin/master -- docs/ mkdocs.yml; echo $?)" -eq 0 ];
+          then
             echo "changes_detected=false" >> $GITHUB_ENV
+            echo "No changes to docs/ and mkdocs.yml - exiting the build.";
+          else
+            echo "changes_detected=true" >> $GITHUB_ENV
+            echo "Changes detected in docs/ or mkdocs.yml - continuing the build.";
           fi
 
       - name: Set up Node.js
