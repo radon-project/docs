@@ -28,7 +28,7 @@ jobs:
       - name: Check for changes in docs/ or mkdocs.yml
         id: check_changes
         run: |
-          git diff --name-only > changed_files.txt
+          git diff --name-only origin/master > changed_files.txt
           if grep -qE '(^docs/|^mkdocs.yml)' changed_files.txt; then
             echo "changes_detected=true" >> $GITHUB_ENV
           else
