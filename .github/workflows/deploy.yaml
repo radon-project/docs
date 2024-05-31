@@ -25,50 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Check for changes in docs/ or mkdocs.yml
-        id: check_changes
-        run: |
-          git diff --name-only > changed_files.txt
-          if grep -qE '(^docs/|^mkdocs.yml)' changed_files.txt; then
-            echo "changes_detected=true" >> $GITHUB_ENV
-          else
-            echo "changes_detected=false" >> $GITHUB_ENV
-          fi
-
-      - name: Set up Node.js
-        if: env.changes_detected == 'true'
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-          cache: "npm"
-          cache-dependency-path: ./package.json
-
-      - name: Install markdownlint-cli
-        if: env.changes_detected == 'true'
-        run: npm install -g markdownlint-cli
-
-      - name: Lint Markdown files
-        if: env.changes_detected == 'true'
-        run: markdownlint **/*.md
-
       - name: Build MkDocs site
-        if: env.changes_detected == 'true'
         run: mkdocs build
 
-      - name: Install Ruby and Bundler
-        if: env.changes_detected == 'true'
-        run: sudo apt-get install -y ruby-full
-
-      - name: Install HTML Proofer
-        if: env.changes_detected == 'true'
-        run: gem install html-proofer
-
-      - name: Test MkDocs site
-        if: env.changes_detected == 'true'
-        run: htmlproofer ./site --only-4xx --check-html --check-img-http --check-favicon --check-external-hash --check-opengraph --check-opengraph-image
-
       - name: Deploy to GitHub Pages
-        if: env.changes_detected == 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

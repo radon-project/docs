@@ -1,6 +1,8 @@
 # Loops
 
-Loops are used to execute a block of code multiple times. The block of code will be executed until the condition is true. This help us to reduce the code and execute the same block of code multiple times.
+Loops are used to execute a block of code multiple times. The block of code will
+be executed until the condition is true. This help us to reduce the code and
+execute the same block of code multiple times.
 
 In Radon we have 2 types of loops.
 
@@ -16,7 +18,8 @@ In for loop we have 2 varients.
 
 ### For loop with range
 
-With range we can specify the start, end and step value. If step value is not provided then it will be 1.
+With range we can specify the start, end and step value.
+If step value is not provided then it will be 1.
 
 ```py
 for i=0 to 10 {
@@ -26,7 +29,7 @@ for i=0 to 10 {
 
 **Output:**
 
-```
+```py
 0
 1
 2
@@ -49,7 +52,7 @@ for i=0 to 10 step 2 {
 
 **Output:**
 
-```
+```py
 0
 2
 4
@@ -59,9 +62,11 @@ for i=0 to 10 step 2 {
 
 ### For loop with sequence of elements
 
-With sequence of elements we can specify the elements in the loop. The loop will run for each element.
+With sequence of elements we can specify the elements in the loop.
+The loop will run for each element.
 
-Here we are using `Array` of elements. The loop will run for each element in the `Array`.
+Here we are using `Array` of elements.
+The loop will run for each element in the `Array`.
 
 ```py
 for i in [1, 2, 3, 4, 5] {
@@ -71,7 +76,7 @@ for i in [1, 2, 3, 4, 5] {
 
 **Output**
 
-```
+```py
 1
 2
 3
@@ -89,7 +94,7 @@ for i in "Hello" {
 
 **Output:**
 
-```
+```py
 H
 e
 l
@@ -109,7 +114,7 @@ for i in hash {
 
 **Output:**
 
-```
+```py
 Key: name
 Value: John
 Key: age
@@ -118,7 +123,8 @@ Value: 30
 
 ## While loop
 
-With while loop we can specify the condition. The loop will run until the condition is true.
+With while loop we can specify the condition.
+The loop will run until the condition is true.
 
 ```py
 i = 0
@@ -130,7 +136,7 @@ while i < 5 {
 
 **Output:**
 
-```
+```py
 0
 1
 2
@@ -138,7 +144,8 @@ while i < 5 {
 4
 ```
 
-We have used `nonlocal` keyword to update the value of `i` in the loop. If we don't use `nonlocal` then it will run into infinite loop.
+We have used `nonlocal` keyword to update the value of `i` in the loop.
+If we don't use `nonlocal` then it will run into infinite loop.
 
 ## Loop control statements
 
@@ -164,7 +171,7 @@ for i=0 to 10 {
 
 **Output:**
 
-```
+```py
 0
 1
 2
@@ -187,7 +194,7 @@ while i < 10 {
 
 **Output:**
 
-```
+```py
 0
 1
 2
@@ -212,7 +219,7 @@ for i=0 to 5 {
 
 **Output:**
 
-```
+```py
 0
 1
 2
@@ -235,7 +242,7 @@ while i < 5 {
 
 **Output:**
 
-```
+```py
 0
 1
 2

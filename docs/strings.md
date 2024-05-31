@@ -2,9 +2,10 @@
 
 ## String methods
 
-- `str_len()` - returns the length of the string
-- `str_find(string, index)` - returns the character at the specified index
-- `str_slice(string, start, end)` - returns the substring from the specified start index to the specified end index
+- `str_len()` - returns the length of the string.
+- `str_find(string, index)` - returns the character at the specified index.
+- `str_slice(string, start, end)` - returns the substring from the specified
+  start index to the specified end index
 
 ```py linenums="1" title="methods.rn"
 str = "Hello, World!"
