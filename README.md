@@ -2,6 +2,9 @@
 
 This documentation is generated using `mkdocs` and `mkdocs-material`. The documentation is hosted on [Github Pages](https://radon-project.github.io/docs).
 
+![https://github.com/radon-project/docs/actions/workflows/deploy.yaml/badge.svg](https://github.com/radon-project/docs/actions/workflows/deploy.yaml/badge.svg)
+![https://github.com/radon-project/docs/actions/workflows/tests.yaml/badge.svg](https://github.com/radon-project/docs/actions/workflows/tests.yaml/badge.svg)
+
 ## Local Development
 
 Follow the instractions for local development setup.
