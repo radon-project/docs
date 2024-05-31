@@ -1,0 +1,12 @@
+{
+  "MD033": {
+    "allowed_elements": [
+      "figure",
+      "figcaption",
+      "a",
+      "strong",
+      "center"
+    ]
+  },
+  "MD036": false
+}

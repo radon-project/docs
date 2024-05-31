@@ -1,7 +1,7 @@
 # Language Reference
 
-## Under Maintenance 
+## Under Maintenance
 
-The language reference is currently under maintenance. Please check back later. 
+The language reference is currently under maintenance. Please check back later.
 
 Thank you for your patience.
