@@ -112,8 +112,8 @@ nav:
       - Classes: classes.md
       - Modules: modules.md
       - Input/Output: input-output.md
-      # - Exceptions: exceptions.md
-      # - File Handling: file-handling.md
+      - Exceptions: exceptions.md
+      - File Handling: file-handling.md
       - Strings: strings.md
       - Arrays: arrays.md
       - Built-in Functions: built-in-functions.md
