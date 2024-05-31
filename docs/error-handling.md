@@ -50,7 +50,7 @@ raise radiation.TypeError
 ```
 
 ### Example
-```js linenums="1" title="raise.rn"
+```js linenums="1" title="input-check.rn"
 import radiation
 
 # Function that only accepts integers
@@ -76,7 +76,7 @@ catch as e
 Radon allows the creation of custom error messages, which can be particularly useful for providing more context-specific error information.
 
 ### Syntax
-```js linenums="1" title="raise.rn"
+```js linenums="1" title="ArgError.rn"
 fun ArgError(arg)
 {
   return "Argument `" + arg + "` is invalid!"
@@ -84,7 +84,7 @@ fun ArgError(arg)
 ```
 
 ### Example
-```js linenums="1" title="raise.rn"
+```js linenums="1" title="arg-validation.rn"
 import radiation
 
 fun validateArg(arg)
