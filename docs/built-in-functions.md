@@ -31,7 +31,8 @@ They are:
 
 ### API methods
 
-- `pyapi(string,ns)` - A high-level Python API for Radon. It is used to call Python functions from Radon.
+- `pyapi(string,ns)` - A high-level Python API for Radon.
+  It is used to call Python functions from Radon.
 
 ### Typecase methods
 
