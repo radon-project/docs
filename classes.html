@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#classes" class="md-skip">
+        <a href="#classes-and-objects" class="md-skip">
           Skip to content
         </a>
       
@@ -517,7 +517,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#classes_1" class="md-nav__link">
+  <a href="#classes" class="md-nav__link">
     <span class="md-ellipsis">
       Classes
     </span>
@@ -603,6 +603,48 @@
   
   <span class="md-ellipsis">
     Input/Output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exceptions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="file-handling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Handling
   </span>
   
 
@@ -864,7 +906,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#classes_1" class="md-nav__link">
+  <a href="#classes" class="md-nav__link">
     <span class="md-ellipsis">
       Classes
     </span>
@@ -920,6 +962,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+  <link rel="stylesheet" href="../stylesheets/extra.css">
   
                   
 
@@ -927,12 +970,21 @@
   
 
 
-<h1 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h1>
+<h1 id="classes-and-objects">Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permanent link">&para;</a></h1>
 <h2 id="object-oriented-programming">Object Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permanent link">&para;</a></h2>
-<p>Object Oriented Programming (OOP) is a programming paradigm that uses objects and their interactions to design and program applications. It is based on the concept of objects rather than just functions and procedures. These objects are organized into classes, which allow individual objects to be grouped together. Most modern programming languages including Java, C/C++, and Python are object-oriented languages, and many older programming languages now have object-oriented versions. </p>
-<p>In Radon, we also have support for OOP. We can create classes and objects. We can also create methods and fields.</p>
-<h2 id="classes_1">Classes<a class="headerlink" href="#classes_1" title="Permanent link">&para;</a></h2>
-<p>Let's start by creating a class. We can create a class using the <code>class</code> keyword. It is followed by the name of the class and the body of the class. The body of the class is enclosed in curly braces.</p>
+<p>Object Oriented Programming (OOP) is a programming paradigm that uses objects
+and their interactions to design and program applications. It is based on the
+concept of objects rather than just functions and procedures. These objects
+are organized into classes, which allow individual objects to be grouped
+together. Most modern programming languages including Java, C/C++, and Python
+are object-oriented languages, and many older programming languages now have
+object-oriented versions.</p>
+<p>In Radon, we also have support for OOP. We can create classes and objects.
+We can also create methods and fields.</p>
+<h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
+<p>Let's start by creating a class. We can create a class using the <code>class</code>
+keyword. It is followed by the name of the class and the body of the class.
+The body of the class is enclosed in curly braces.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">classes.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
@@ -940,21 +992,30 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h2>
-<p>Now that we have created a class, we can create an object. We can create an object by simply calling the class like as a function. It is followed by the name of the class and the arguments in parentheses. The arguments are optional.</p>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">objects.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Person</span><span class="p">()</span>
+<p>Now that we have created a class, we can create an object. We can create an
+object by simply calling the class like as a function. It is followed by the
+name of the class and the arguments in parentheses. The arguments are optional.</p>
+<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">objects.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Person</span><span class="p">();</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h2>
-<p>Fields are the variables that are declared inside a class. They are used to store data. They are also called instance variables because they are unique to each instance of the class. They are declared using the <code>var</code> keyword. It is followed by the name of the field and the type of the field. The type of the field is optional.</p>
+<p>Fields are the variables that are declared inside a class. They are used to
+store data. They are also called instance variables because they are unique
+to each instance of the class. They are declared using the <code>var</code> keyword. It
+is followed by the name of the field and the type of the field.
+The type of the field is optional.</p>
 <div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">fields.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;John&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
-<p>Constructors are special methods that are used to initialize the fields of a class. They are called when an object is created. They are declared using the <code>fun</code> keyword. It is followed by the name (class name) of the constructor and the parameters in parentheses. The parameters are optional.</p>
+<p>Constructors are special methods that are used to initialize the fields of a
+class. They are called when an object is created. They are declared using the
+<code>fun</code> keyword. It is followed by the name (class name) of the constructor and
+the parameters in parentheses. The parameters are optional.</p>
 <div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">constructors.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -964,15 +1025,18 @@
 <span class="normal"><a href="#__codelineno-3-7">7</a></span>
 <span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nx">fun</span><span class="w"> </span><span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">age</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">age</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="kd">var</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
-<p>Methods are the functions that are declared inside a class. They are used to define the behavior of the class. They are declared using the <code>fun</code> keyword. It is followed by the name of the method, the parameters in parentheses, and the return type. The parameters and the return type are optional.</p>
+<p>Methods are the functions that are declared inside a class. They are used to
+define the behavior of the class. They are declared using the <code>fun</code> keyword.
+It is followed by the name of the method, the parameters in parentheses, and
+the return type. The parameters and the return type are optional.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">methods.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -987,8 +1051,8 @@
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
 <span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">fun</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">var</span> <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="n">var</span> <span class="n">this</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="n">this</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="p">}</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="n">fun</span> <span class="n">sayHello</span><span class="p">()</span> <span class="p">{</span>
@@ -996,7 +1060,7 @@
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="p">}</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">var</span> <span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="n">person</span><span class="o">.</span><span class="n">sayHello</span><span class="p">()</span> <span class="c1"># Output: Hello, John!</span>
 </span></code></pre></div></td></tr></table></div>
 
@@ -1014,7 +1078,6 @@
 
 
                 
-  <script src="/flarelytics/client.js"></script>
 
               </article>
             </div>

@@ -12,13 +12,13 @@
         <meta name="author" content="Md. Almas Ali">
       
       
-        <link rel="canonical" href="https://radon-project.github.io/functions.html">
+        <link rel="canonical" href="https://radon-project.github.io/exceptions.html">
       
       
-        <link rel="prev" href="loops.html">
+        <link rel="prev" href="input-output.html">
       
       
-        <link rel="next" href="classes.html">
+        <link rel="next" href="file-handling.html">
       
       
       <link rel="icon" href="assets/images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Functions - The Radon Programming Language</title>
+        <title>Exceptions - The Radon Programming Language</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#functions" class="md-skip">
+        <a href="#exceptions" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Functions
+              Exceptions
             
           </span>
         </div>
@@ -438,30 +438,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="functions.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="functions.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,95 +450,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#named-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Named functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anonymous functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#one-liner-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      One-liner functions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calling-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calling functions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default parameters
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -631,10 +522,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="exceptions.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="exceptions.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -643,6 +554,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handling-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raise-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raise exceptions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -912,69 +861,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types-of-functions" class="md-nav__link">
+  <a href="#handling-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
-      Types of functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#named-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Named functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anonymous functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#one-liner-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      One-liner functions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calling-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calling functions
+      Handling exceptions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-parameters" class="md-nav__link">
+  <a href="#raise-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
-      Function parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default parameters
+      Raise exceptions
     </span>
   </a>
   
@@ -1000,71 +898,76 @@
   
 
 
-<h1 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h1>
-<h2 id="types-of-functions">Types of functions<a class="headerlink" href="#types-of-functions" title="Permanent link">&para;</a></h2>
-<p>Functions are the building blocks of a task. They are used to define the
-behavior of the program. In Radon, we declare functions using the <code>fun</code> keyword.
-It is followed by the name of the function, the parameters, and the return type.
-The body of the function is enclosed in curly braces.</p>
-<p>In Radon, there are three types of functions:</p>
-<ul>
-<li>Named functions</li>
-<li>Anonymous functions</li>
-<li>One-liner functions</li>
-</ul>
-<h3 id="named-functions">Named functions<a class="headerlink" href="#named-functions" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">named_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<h1 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h1>
+<p>Radon has a powerfull exception handler. It can handle exceptions and errors in
+the program. It can also throw exceptions and errors.</p>
+<h2 id="handling-exceptions">Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permanent link">&para;</a></h2>
+<p>To handle exceptions, we use the <code>try</code> and <code>catch</code> blocks. The <code>try</code> block
+contains the code that may throw an exception. The <code>catch</code> block contains
+the code that handles the exception.</p>
+<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exceptions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">fun</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="c1">// code that may throw an exception</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">// code that handles the exception</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Exception caught: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="anonymous-functions">Anonymous functions<a class="headerlink" href="#anonymous-functions" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">anonymous_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fun</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
+<p><strong>Output:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Exception<span class="w"> </span>caught:<span class="w"> </span>Division<span class="w"> </span>by<span class="w"> </span>zero
+</span></code></pre></div>
+<p>Don't forget to use the <code>as</code> keyword to assign the exception to a variable.
+The variable can be used to get the exception message. If you don't want to
+use the exception message, you can omit the variable.</p>
+<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exceptions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="c1">// code that may throw an exception</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="c1">// code that handles the exception</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Exception caught&quot;</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="one-liner-functions">One-liner functions<a class="headerlink" href="#one-liner-functions" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">one_liner_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">fun</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="calling-functions">Calling functions<a class="headerlink" href="#calling-functions" title="Permanent link">&para;</a></h2>
-<p>Calling a function is done by using the function name followed by the arguments
-in parentheses.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">calling_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># Output: 3</span>
-</span></code></pre></div></td></tr></table></div>
-<p>That's it! You now know how to call functions in Radon.</p>
-<h2 id="function-parameters">Function parameters<a class="headerlink" href="#function-parameters" title="Permanent link">&para;</a></h2>
-<p>Function parameters are the names listed in the function definition. They are
-used to pass values into the function. The parameters are separated by commas.
-The parameters are optional.</p>
-<p>We can also leave out the parentheses if there are no parameters.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">function_parameters.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<p><strong>Output:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Exception<span class="w"> </span>caught
+</span></code></pre></div>
+<h2 id="raise-exceptions">Raise exceptions<a class="headerlink" href="#raise-exceptions" title="Permanent link">&para;</a></h2>
+<p>To raise an exception, we use the <code>raise</code> keyword followed by the exception
+type and the message. We have builtin exceptions in <code>radiation</code> module. We can
+use them to raise exceptions.</p>
+<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exceptions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">fun</span> <span class="n">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">say_hello</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, World!</span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">radiation</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">if</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nx">raise</span><span class="w"> </span><span class="nx">radiation</span><span class="p">.</span><span class="nx">ValueError</span><span class="p">(</span><span class="s2">&quot;2 != 4&quot;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="default-parameters">Default parameters<a class="headerlink" href="#default-parameters" title="Permanent link">&para;</a></h2>
-<p>Default parameters are used to assign a default value to a parameter. If the
-parameter is not passed, the default value is used.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">default_parameters.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">fun</span> <span class="n">new_user</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Guest&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">}</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">new_user</span><span class="p">()</span> <span class="c1"># Output: Hello, Guest!</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">new_user</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, World!</span>
-</span></code></pre></div></td></tr></table></div>
+<p><strong>Output:</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Radiation</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="n">File</span> <span class="o">&lt;</span><span class="n">stdin</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">4</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">raise</span> <span class="n">radiation</span><span class="o">.</span><span class="n">ValueError</span><span class="p">(</span><span class="s2">&quot;2 + 2 != 4&quot;</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>          <span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</span></code></pre></div>
+<p>When the exception is raised, the program stops executing and the exception is
+propagated up the call stack. The exception can be caught by a <code>try</code> block. If
+the exception is not caught, the program stops executing and the exception
+is printed to the console.</p>
 
 
 

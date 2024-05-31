@@ -12,13 +12,13 @@
         <meta name="author" content="Md. Almas Ali">
       
       
-        <link rel="canonical" href="https://radon-project.github.io/functions.html">
+        <link rel="canonical" href="https://radon-project.github.io/file-handling.html">
       
       
-        <link rel="prev" href="loops.html">
+        <link rel="prev" href="exceptions.html">
       
       
-        <link rel="next" href="classes.html">
+        <link rel="next" href="strings.html">
       
       
       <link rel="icon" href="assets/images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Functions - The Radon Programming Language</title>
+        <title>File Handling - The Radon Programming Language</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#functions" class="md-skip">
+        <a href="#file-handling" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Functions
+              File Handling
             
           </span>
         </div>
@@ -438,30 +438,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="functions.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="functions.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,95 +450,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#named-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Named functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anonymous functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#one-liner-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      One-liner functions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calling-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calling functions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default parameters
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -652,10 +543,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="file-handling.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    File Handling
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="file-handling.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -664,6 +575,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      File modes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-from-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading from a file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-to-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Writing to a file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing a file
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -912,69 +879,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types-of-functions" class="md-nav__link">
+  <a href="#file-modes" class="md-nav__link">
     <span class="md-ellipsis">
-      Types of functions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#named-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Named functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anonymous functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#one-liner-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      One-liner functions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calling-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calling functions
+      File modes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-parameters" class="md-nav__link">
+  <a href="#reading-from-a-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Function parameters
+      Reading from a file
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-parameters" class="md-nav__link">
+  <a href="#writing-to-a-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Default parameters
+      Writing to a file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing a file
     </span>
   </a>
   
@@ -1000,71 +934,73 @@
   
 
 
-<h1 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h1>
-<h2 id="types-of-functions">Types of functions<a class="headerlink" href="#types-of-functions" title="Permanent link">&para;</a></h2>
-<p>Functions are the building blocks of a task. They are used to define the
-behavior of the program. In Radon, we declare functions using the <code>fun</code> keyword.
-It is followed by the name of the function, the parameters, and the return type.
-The body of the function is enclosed in curly braces.</p>
-<p>In Radon, there are three types of functions:</p>
+<h1 id="file-handling">File handling<a class="headerlink" href="#file-handling" title="Permanent link">&para;</a></h1>
+<p>File handling is an essential part of any programming language. Radon provides
+a simple way to read and write files. In this section, we will learn how to
+read and write files in Radon.</p>
+<h2 id="file-modes">File modes<a class="headerlink" href="#file-modes" title="Permanent link">&para;</a></h2>
+<p>When opening a file, we can specify the mode in which we want to open the file.</p>
+<p>The modes are:</p>
 <ul>
-<li>Named functions</li>
-<li>Anonymous functions</li>
-<li>One-liner functions</li>
+<li><code>r</code>: Read mode. Opens the file for reading. The file must exist.</li>
+<li><code>w</code>: Write mode. Opens the file for writing. If the file does not exist,
+  it creates a new file. If the file exists, it truncates the file.</li>
+<li><code>a</code>: Append mode. Opens the file for writing. If the file does not exist,
+  it creates a new file. If the file exists, it appends the content to the file.</li>
+<li><code>r+</code>: Read and write mode. Opens the file for reading and writing.
+  The file must exist.</li>
+<li><code>w+</code>: Write and read mode. Opens the file for reading and writing.
+  If the file does not exist, it creates a new file. If the file exists,
+  it truncates the file.</li>
+<li><code>a+</code>: Append and read mode. Opens the file for reading and writing.
+  If the file does not exist, it creates a new file. If the file exists,
+  it appends the content to the file.</li>
 </ul>
-<h3 id="named-functions">Named functions<a class="headerlink" href="#named-functions" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">named_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<p>By default, the file is opened in read mode.</p>
+<h2 id="reading-from-a-file">Reading from a file<a class="headerlink" href="#reading-from-a-file" title="Permanent link">&para;</a></h2>
+<p>To manipulate files in Radon, we use built-in <code>File</code> class. We can create a new
+instance of <code>File</code> class by passing the file path to the constructor. We can
+then use the <code>read</code> method to read the contents of the file.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">fun</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="anonymous-functions">Anonymous functions<a class="headerlink" href="#anonymous-functions" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">anonymous_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<p>You can also read the file line by line using the <code>readline</code> method.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fun</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">line</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="one-liner-functions">One-liner functions<a class="headerlink" href="#one-liner-functions" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">one_liner_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">fun</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+<p>You can also read all the lines of the file using the <code>readlines</code> method.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="calling-functions">Calling functions<a class="headerlink" href="#calling-functions" title="Permanent link">&para;</a></h2>
-<p>Calling a function is done by using the function name followed by the arguments
-in parentheses.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">calling_functions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># Output: 3</span>
+<h2 id="writing-to-a-file">Writing to a file<a class="headerlink" href="#writing-to-a-file" title="Permanent link">&para;</a></h2>
+<p>To write to a file, we use the <code>write</code> method. We can pass the content to the
+<code>write</code> method to write to the file.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p>That's it! You now know how to call functions in Radon.</p>
-<h2 id="function-parameters">Function parameters<a class="headerlink" href="#function-parameters" title="Permanent link">&para;</a></h2>
-<p>Function parameters are the names listed in the function definition. They are
-used to pass values into the function. The parameters are separated by commas.
-The parameters are optional.</p>
-<p>We can also leave out the parentheses if there are no parameters.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">function_parameters.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<h2 id="closing-a-file">Closing a file<a class="headerlink" href="#closing-a-file" title="Permanent link">&para;</a></h2>
+<p>After reading or writing to a file, it is important to close the file. We can
+use the <code>close</code> method to close the file.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">fun</span> <span class="n">say_hello</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">}</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">say_hello</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, World!</span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1"># code that reads or writes to the file</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
-<h2 id="default-parameters">Default parameters<a class="headerlink" href="#default-parameters" title="Permanent link">&para;</a></h2>
-<p>Default parameters are used to assign a default value to a parameter. If the
-parameter is not passed, the default value is used.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">default_parameters.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">fun</span> <span class="n">new_user</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Guest&quot;</span><span class="p">)</span> <span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">}</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">new_user</span><span class="p">()</span> <span class="c1"># Output: Hello, Guest!</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">new_user</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span> <span class="c1"># Output: Hello, World!</span>
+<p>Check the file is closed or not using the <code>is_closed</code> method.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">file</span><span class="o">.</span><span class="n">is_closed</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
+<p>That's it! You now know how to read and write files in Radon.</p>
 
 
 
