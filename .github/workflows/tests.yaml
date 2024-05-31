@@ -25,7 +25,8 @@ jobs:
       - name: Check for changes in docs/ or mkdocs.yml
         id: check_changes
         run: |
-          git diff --name-only origin/master -- > changed_files.txt
+          git fetch origin
+          git diff --name-only origin/main -- > changed_files.txt
           if grep -qE '(^docs/|^mkdocs.yml)' changed_files.txt; then
             echo "changes_detected=true" >> $GITHUB_ENV
           else
@@ -50,9 +51,15 @@ jobs:
         if: env.changes_detected == 'true'
         run: mkdocs build
 
-      - name: Install Ruby and Bundler
+      - name: Install Ruby
         if: env.changes_detected == 'true'
-        run: sudo apt-get install -y ruby-full
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install Bundler
+        if: env.changes_detected == 'true'
+        run: gem install bundler
 
       - name: Install HTML Proofer
         if: env.changes_detected == 'true'
