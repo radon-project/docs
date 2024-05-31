@@ -7,7 +7,7 @@
 - `str_slice(string, start, end)` - returns the substring from the specified start index to the specified end index
 
 ```py linenums="1" title="methods.rn"
-var str = "Hello, World!"
+str = "Hello, World!"
 
 print(str_len(str)) # 13
 print(str_find(str, 0)) # H
@@ -22,7 +22,7 @@ print(str_slice(str, 0, 5)) # Hello
 - `*` (repetition)
 
 ```py linenums="1" title="operators.rn"
-var str = "Hello, World!"
+str = "Hello, World!"
 
 print(str + " " + "Hello, World!") # Hello, World! Hello, World!
 print(str * 2) # Hello, World!Hello, World!

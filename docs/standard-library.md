@@ -5,12 +5,14 @@
 ```text
 *
 ├── stdlib
-│   ├── Argparser.rn
-│   ├── Array.rn
-│   ├── Math.rn
-│   ├── String.rn
-│   ├── System.rn
-│   └── Winlib.rn
+│   ├── argparser.rn
+│   ├── array.rn
+│   ├── colorlib.rn
+│   ├── math.rn
+│   ├── radiation.rn
+│   ├── string.rn
+│   ├── system.rn
+│   └── winlib.rn
 ```
 
 ... and more to come! Under development. 

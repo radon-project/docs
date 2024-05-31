@@ -21,7 +21,7 @@ class Person {
 Now that we have created a class, we can create an object. We can create an object by simply calling the class like as a function. It is followed by the name of the class and the arguments in parentheses. The arguments are optional.
 
 ```js linenums="1" title="objects.rn"
-var person = Person()
+person = Person()
 ```
 
 ## Fields
@@ -30,8 +30,8 @@ Fields are the variables that are declared inside a class. They are used to stor
 
 ```js linenums="1" title="fields.rn"
 class Person {
-    var name = "John"
-    var age = 20
+    name = "John"
+    age = 20
 }
 ```
 
@@ -42,12 +42,12 @@ Constructors are special methods that are used to initialize the fields of a cla
 ```js linenums="1" title="constructors.rn"
 class Person {
     fun Person(name, age) {
-        var this.name = name
-        var this.age = age
+        this.name = name
+        this.age = age
     }
 }
 
-var person = Person("John", 20)
+person = Person("John", 20)
 ```
 
 ## Methods
@@ -56,9 +56,9 @@ Methods are the functions that are declared inside a class. They are used to def
 
 ```py linenums="1" title="methods.rn"
 class Person {
-    fun Person(name, age) {
-        var this.name = name
-        var this.age = age
+    fun __constructor__(name, age) {
+        this.name = name
+        this.age = age
     }
 
     fun sayHello() {
@@ -66,7 +66,7 @@ class Person {
     }
 }
 
-var person = Person("John", 20)
+person = Person("John", 20)
 person.sayHello() # Output: Hello, John!
 
 ```

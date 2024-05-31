@@ -1,8 +1,8 @@
 # Arrays
 
-## Array methods
+## Built-in Array methods
 
-- `arr_len()` - returns the length of the array
+- `arr_len()` or `len(arr)` - returns the length of the array
 - `arr_push(array, item)` - adds an item to the end of the array
 - `arr_pop(array, index)` - removes an item from the end of the array
 - `arr_append(array, item)` - adds an item to the end of the array
@@ -11,7 +11,7 @@
 - `arr_slice(array, start, end)` - returns the items from the specified start index to the specified end index
     
 ```py linenums="1" title="methods.rn"
-var arr = [1, 2, 3, 4, 5]
+arr = [1, 2, 3, 4, 5]
 print(arr_len(arr)) # 5
 
 arr_push(arr, 6)
@@ -32,14 +32,14 @@ print(arr_find(arr, 1)) # 2
 print(arr_slice(arr, 0, 5)) # [1, 2, 3, 4, 5]
 ```
 
-## Array operators (Development)
+## Array operators
 
 - `+` (concatenation)
 - `*` (repetition)
 
 ```py linenums="1" title="operators.rn"
-var arr1 = [1, 2, 3]
-var arr2 = [4, 5, 6]
+arr1 = [1, 2, 3]
+arr2 = [4, 5, 6]
 
 print(arr1 + arr2) # [1, 2, 3, 4, 5, 6]
 print(arr1 * 2) # [1, 2, 3, 1, 2, 3]
@@ -60,19 +60,17 @@ print(arr1 * 2) # [1, 2, 3, 1, 2, 3]
 
 
 ```py linenums="1" title="array-standard-library.rn"
-include Array # Include the Array standard library
+import Array # Include the Array standard library
 
 # Create an array instance using the Array class
-var arr = Array([1, 2, 3, 4, 5])
+arr = Array([1, 2, 3, 4, 5])
 
-print(arr.len()) # 5
+print(len(arr)) # 5
 print(arr.is_empty()) # false
 print(arr.to_string()) # "[1, 2, 3, 4, 5]"
 print(arr.is_array()) # true
 
-print(arr.map(fun (item) {
-    return str(item)
-})) # ["1", "2", "3", "4", "5"]
+print(arr.map(fun (item) -> str(item))) # ["1", "2", "3", "4", "5"]
 
 print(arr.append(6)) # [1, 2, 3, 4, 5, 6]
 print(arr.pop(5)) # [1, 2, 3, 4, 5]
