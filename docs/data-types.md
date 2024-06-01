@@ -15,24 +15,21 @@ Arrays are declared using the `[]` syntax. The type of the array is the type
 of the elements it contains.
 
 ```js linenums="1" title="arrays.rn"
-a = [1, 2, 3]; // a is an array of ints
-b = [1.0, 2.0, 3.0]; // b is an array of floats
-c = ["a", "b", "c"]; // c is an array of strings
+a = [1, 2, 3] // a is an array of ints
+b = [1.0, 2.0, 3.0] // b is an array of floats
+c = ["a", "b", "c"] // c is an array of strings
 
 // Arrays can be nested
-d = [
-  [1, 2],
-  [3, 4],
-]; // d is an array of arrays of ints
+d = [[1, 2], [3, 4]] // d is an array of arrays of ints
 
 // Arrays can be empty
-e = []; // e is an empty array of unknown type
+e = [] // e is an empty array of unknown type
 ```
 
-## Objects (Development)
+## Hashmaps
 
-Objects are declared using the `{}` syntax. The type of the object is the
-type of the fields it contains.
+Hashmaps (or objects) are declared using the `{}` syntax.
+The type of the object is the type of the fields it contains.
 
 ```js linenums="1" title="objects.rn"
 // a is an object with fields x and y of type int

@@ -18,7 +18,7 @@ name should have to be in Pascal Case `PascalCase`.
 
 ```py linenums="1" title="Hello.rn"
 class Hello {
-    fun Hello() {
+    fun __constructor__() {
         print("Hello, World!")
     }
 }
@@ -30,5 +30,5 @@ A module is imported by using the `include` keyword. It is followed by the name
 of the module. The name of the module should have to be in Pascal Case `PascalCase`.
 
 ```py linenums="1" title="importing.rn"
-include Hello
+import Hello
 ```

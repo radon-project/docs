@@ -32,7 +32,7 @@ object by simply calling the class like as a function. It is followed by the
 name of the class and the arguments in parentheses. The arguments are optional.
 
 ```js linenums="1" title="objects.rn"
-person = Person();
+person = Person()
 ```
 
 ## Fields
@@ -77,16 +77,16 @@ the return type. The parameters and the return type are optional.
 
 ```py linenums="1" title="methods.rn"
 class Person {
-    fun Person(name, age) {
+    fun __constructor__(name, age) {
         this.name = name
         this.age = age
     }
 
-    fun sayHello() {
+    fun say_hello() {
         print("Hello, " + this.name + "!")
     }
 }
 
 person = Person("John", 20)
-person.sayHello() # Output: Hello, John!
+person.say_hello() # Output: Hello, John!
 ```

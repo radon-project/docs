@@ -1,8 +1,8 @@
 # Arrays
 
-## Array methods
+## Built-in Array methods
 
-- `arr_len()` - returns the length of the array
+- `arr_len()` or `len(arr)` - returns the length of the array
 - `arr_push(array, item)` - adds an item to the end of the array
 - `arr_pop(array, index)` - removes an item from the end of the array
 - `arr_append(array, item)` - adds an item to the end of the array
@@ -34,7 +34,7 @@ print(arr_find(arr, 1)) # 2
 print(arr_slice(arr, 0, 5)) # [1, 2, 3, 4, 5]
 ```
 
-## Array operators (Development)
+## Array operators
 
 - `+` (concatenation)
 - `*` (repetition)
@@ -63,19 +63,17 @@ print(arr1 * 2) # [1, 2, 3, 1, 2, 3]
 - `is_array()` - returns `true` if the value is an array, otherwise `false`
 
 ```py linenums="1" title="array-standard-library.rn"
-include Array # Include the Array standard library
+import Array # Include the Array standard library
 
 # Create an array instance using the Array class
 arr = Array([1, 2, 3, 4, 5])
 
-print(arr.len()) # 5
+print(len(arr)) # 5
 print(arr.is_empty()) # false
 print(arr.to_string()) # "[1, 2, 3, 4, 5]"
 print(arr.is_array()) # true
 
-print(arr.map(fun (item) {
-    return str(item)
-})) # ["1", "2", "3", "4", "5"]
+print(arr.map(fun (item) -> str(item))) # ["1", "2", "3", "4", "5"]
 
 print(arr.append(6)) # [1, 2, 3, 4, 5, 6]
 print(arr.pop(5)) # [1, 2, 3, 4, 5]

@@ -14,7 +14,13 @@ They are:
 - `clear()` - clears the screen.
 - `exit()` - exits the program.
 
-### Same as include statement
+### Shell commands
+
+- `help(obj)` - get help about any object
+- `license()` - show project license
+- `credits()` - show project credits
+
+### Same as `import` statement
 
 - `require()` - same as include statement to include a file or
   library in the current program.
@@ -25,8 +31,8 @@ They are:
 
 ### API methods
 
-- `pyapi(string)` - A high-level Python API for Radon.
-  It is used to call Python functions from Radon. (Development)
+- `pyapi(string,ns)` - A high-level Python API for Radon.
+  It is used to call Python functions from Radon.
 
 ### Typecase methods
 
