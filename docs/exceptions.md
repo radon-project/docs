@@ -1,17 +1,18 @@
 # Exceptions
 
-Radon has a powerfull exception handler. It can handle exceptions and errors in
-the program. It can also throw exceptions and errors.
+Error handling is an important part of writing maintainable code.
+Radon has a powerful exception handler. It can handle exceptions that
+may occur during the execution of a block of code.
 
 ## Handling exceptions
 
-To handle exceptions, we use the `try` and `catch` blocks. The `try` block
+In Radon, `try-catch` blocks are used for error handling. The `try` block
 contains the code that may throw an exception. The `catch` block contains
 the code that handles the exception.
 
 ```js linenums="1" title="exceptions.rn"
 try {
-    // code that may throw an exception
+    // code that may throw an exception (in this case, zero division)
     a = 1 / 0
 } catch as err {
     // code that handles the exception
@@ -47,9 +48,9 @@ Exception caught
 
 ## Raise exceptions
 
-To raise an exception, we use the `raise` keyword followed by the exception
-type and the message. We have builtin exceptions in `radiation` module. We can
-use them to raise exceptions.
+In Radon, errors can be raised explicitly using the `raise` keyword. This is useful for enforcing certain conditions or for creating custom error messages.
+
+Radon has a standard `radiation` module for Error Types (you can type `radiation.errors` in the shell to view a list of available error types)
 
 ```js linenums="1" title="exceptions.rn"
 import radiation
@@ -68,6 +69,43 @@ ValueError: 2 + 2 != 4
 
     raise radiation.ValueError("2 + 2 != 4")
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+```
+
+## Defining custom error types
+
+To define custom errors, you need to define a function that returns a string as the
+error message.
+
+## Example
+
+```js linenums="1" title="arg-error.rn"
+fun FunctionError(func, base_err) -> "Something went wrong in " + func + ": " + base_err 
+
+fun risky_operation(y)
+{
+    try
+    {
+        x = 10 / y
+    }
+    catch as e
+    {
+        raise FunctionError("risky_operation", e)
+    } 
+}
+
+risky_operation(0)
+```
+
+**Output:**
+
+```py
+Radiation (most recent call last):
+  File <stdin>, line 10
+FunctionError: Something went wrong in risky_operation: Division by zero
+
+    raise FunctionError("risky_operation", e)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ```
 
