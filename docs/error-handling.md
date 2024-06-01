@@ -79,22 +79,12 @@ error message.
 
 ## Example
 
-```js linenums="1" title="arg-error.rn"
-fun FunctionError(func, base_err) -> "Something went wrong in " + func + ": " + base_err 
-
-fun risky_operation(y)
-{
-    try
-    {
-        x = 10 / y
-    }
-    catch as e
-    {
-        raise FunctionError("risky_operation", e)
-    } 
+```js linenums="1" title="custom-error.rn"
+fun CustomError(file) {
+    return "Something went wrong in " + file
 }
 
-risky_operation(0)
+raise CustomError("custom-error.rn")
 ```
 
 **Output:**
@@ -102,10 +92,10 @@ risky_operation(0)
 ```py
 Radiation (most recent call last):
   File <stdin>, line 10
-FunctionError: Something went wrong in risky_operation: Division by zero
+FunctionError: Something went wrong in risky_operation
 
-    raise FunctionError("risky_operation", e)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise FunctionError("risky_operation")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ```
 
