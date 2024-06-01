@@ -12,7 +12,7 @@
         <meta name="author" content="Md. Almas Ali">
       
       
-        <link rel="canonical" href="https://radon-project.github.io/exceptions.html">
+        <link rel="canonical" href="https://radon-project.github.io/error-handling.html">
       
       
         <link rel="prev" href="input-output.html">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Exceptions - The Radon Programming Language</title>
+        <title>Error Handling - The Radon Programming Language</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exceptions" class="md-skip">
+        <a href="#error-handling" class="md-skip">
           Skip to content
         </a>
       
@@ -137,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exceptions
+              Error Handling
             
           </span>
         </div>
@@ -538,18 +538,18 @@
           
   
   <span class="md-ellipsis">
-    Exceptions
+    Error Handling
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="exceptions.html" class="md-nav__link md-nav__link--active">
+      <a href="error-handling.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Exceptions
+    Error Handling
   </span>
   
 
@@ -583,6 +583,24 @@
   <a href="#raise-exceptions" class="md-nav__link">
     <span class="md-ellipsis">
       Raise exceptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defining-custom-error-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining custom error types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
@@ -878,6 +896,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#defining-custom-error-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defining custom error types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -898,11 +934,12 @@
   
 
 
-<h1 id="exceptions">Exceptions<a class="headerlink" href="#exceptions" title="Permanent link">&para;</a></h1>
-<p>Radon has a powerfull exception handler. It can handle exceptions and errors in
-the program. It can also throw exceptions and errors.</p>
+<h1 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h1>
+<p>Error handling is an important part of writing maintainable code.
+Radon has a powerful exception handler. It can handle exceptions that
+may occur during the execution of a block of code.</p>
 <h2 id="handling-exceptions">Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permanent link">&para;</a></h2>
-<p>To handle exceptions, we use the <code>try</code> and <code>catch</code> blocks. The <code>try</code> block
+<p>In Radon, <code>try-catch</code> blocks are used for error handling. The <code>try</code> block
 contains the code that may throw an exception. The <code>catch</code> block contains
 the code that handles the exception.</p>
 <div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exceptions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -912,7 +949,7 @@ the code that handles the exception.</p>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="c1">// code that may throw an exception</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="c1">// code that may throw an exception (in this case, zero division)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">0</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">// code that handles the exception</span>
@@ -943,9 +980,8 @@ use the exception message, you can omit the variable.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Exception<span class="w"> </span>caught
 </span></code></pre></div>
 <h2 id="raise-exceptions">Raise exceptions<a class="headerlink" href="#raise-exceptions" title="Permanent link">&para;</a></h2>
-<p>To raise an exception, we use the <code>raise</code> keyword followed by the exception
-type and the message. We have builtin exceptions in <code>radiation</code> module. We can
-use them to raise exceptions.</p>
+<p>In Radon, errors can be raised explicitly using the <code>raise</code> keyword. This is useful for enforcing certain conditions or for creating custom error messages.</p>
+<p>Radon has a standard <code>radiation</code> module for Error Types (you can type <code>radiation.errors</code> in the shell to view a list of available error types)</p>
 <div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">exceptions.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -963,6 +999,28 @@ use them to raise exceptions.</p>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">raise</span> <span class="n">radiation</span><span class="o">.</span><span class="n">ValueError</span><span class="p">(</span><span class="s2">&quot;2 + 2 != 4&quot;</span><span class="p">)</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>          <span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</span></code></pre></div>
+<h2 id="defining-custom-error-types">Defining custom error types<a class="headerlink" href="#defining-custom-error-types" title="Permanent link">&para;</a></h2>
+<p>To define custom errors, you need to define a function that returns a string as the
+error message.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">custom-error.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nx">fun</span><span class="w"> </span><span class="nx">CustomError</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Something went wrong in &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">file</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nx">raise</span><span class="w"> </span><span class="nx">CustomError</span><span class="p">(</span><span class="s2">&quot;custom-error.rn&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p><strong>Output:</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Radiation</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="n">File</span> <span class="o">&lt;</span><span class="n">stdin</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">10</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">FunctionError</span><span class="p">:</span> <span class="n">Something</span> <span class="n">went</span> <span class="n">wrong</span> <span class="ow">in</span> <span class="n">risky_operation</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="k">raise</span> <span class="n">FunctionError</span><span class="p">(</span><span class="s2">&quot;risky_operation&quot;</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>          <span class="o">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 </span></code></pre></div>
 <p>When the exception is raised, the program stops executing and the exception is
 propagated up the call stack. The exception can be caught by a <code>try</code> block. If
