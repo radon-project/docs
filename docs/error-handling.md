@@ -1,4 +1,4 @@
-# Exceptions
+# Error Handling
 
 Error handling is an important part of writing maintainable code.
 Radon has a powerful exception handler. It can handle exceptions that
