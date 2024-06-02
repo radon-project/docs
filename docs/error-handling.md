@@ -91,11 +91,11 @@ raise CustomError("custom-error.rn")
 
 ```py
 Radiation (most recent call last):
-  File <stdin>, line 10
-FunctionError: Something went wrong in risky_operation
+  File <stdin>, line 5
+FunctionError: Something went wrong in custom-error.rn
 
-    raise FunctionError("risky_operation")
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+raise CustomError("custom-error.rn")
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ```
 
