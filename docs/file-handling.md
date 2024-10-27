@@ -4,6 +4,12 @@ File handling is an essential part of any programming language. Radon provides
 a simple way to read and write files. In this section, we will learn how to
 read and write files in Radon.
 
+> ### **SECURITY NOTICE:** Executing any file operations will prompt the user for confirmation before proceeding, for example:
+```
+[DISK_ACCESS] This program is attempting to access the disk. Continue execution?
+[Y/n] -> _
+```
+
 ## File modes
 
 When opening a file, we can specify the mode in which we want to open the file.
