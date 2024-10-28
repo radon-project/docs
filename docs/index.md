@@ -56,7 +56,7 @@ Some of the features of Radon include:
 
 ## Login Logic
 
-```js linenums="1" title="Login.rn"
+```rn linenums="1" title="Login.rn"
 # This is a Radon test file for the Radon Programming Language.
 
 class Network {

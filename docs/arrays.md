@@ -12,7 +12,7 @@
 - `arr_slice(array, start, end)` - returns the items from the specified
   start index to the specified end index
 
-```py linenums="1" title="methods.rn"
+```rn linenums="1" title="methods.rn"
 arr = [1, 2, 3, 4, 5]
 print(arr_len(arr)) # 5
 
@@ -39,7 +39,7 @@ print(arr_slice(arr, 0, 5)) # [1, 2, 3, 4, 5]
 - `+` (concatenation)
 - `*` (repetition)
 
-```py linenums="1" title="operators.rn"
+```rn linenums="1" title="operators.rn"
 arr1 = [1, 2, 3]
 arr2 = [4, 5, 6]
 
@@ -62,7 +62,7 @@ print(arr1 * 2) # [1, 2, 3, 1, 2, 3]
 - `to_string()` - returns the string representation of the array
 - `is_array()` - returns `true` if the value is an array, otherwise `false`
 
-```py linenums="1" title="array-standard-library.rn"
+```rn linenums="1" title="array-standard-library.rn"
 import Array # Include the Array standard library
 
 # Create an array instance using the Array class

@@ -7,7 +7,7 @@
 - `str_slice(string, start, end)` - returns the substring from the specified
   start index to the specified end index
 
-```py linenums="1" title="methods.rn"
+```rn linenums="1" title="methods.rn"
 str = "Hello, World!"
 
 print(str_len(str)) # 13
@@ -22,7 +22,7 @@ print(str_slice(str, 0, 5)) # Hello
 - `+` (concatenation)
 - `*` (repetition)
 
-```py linenums="1" title="operators.rn"
+```rn linenums="1" title="operators.rn"
 str = "Hello, World!"
 
 print(str + " " + "Hello, World!") # Hello, World! Hello, World!
@@ -33,7 +33,7 @@ print(str * 2) # Hello, World!Hello, World!
 
 - `str()` - converts any value to a string
 
-```py linenums="1" title="casting.rn"
+```rn linenums="1" title="casting.rn"
 print(str(123)) # 123
 print(str(123.456)) # 123.456
 print(str(true)) # true
@@ -44,7 +44,7 @@ print(str(false)) # false
 
 - `is_str()` - returns `true` if the value is a string, otherwise `false`
 
-```py linenums="1" title="type-checking.rn"
+```rn linenums="1" title="typechecks.rn"
 print(is_str("Hello, World!")) # true
 print(is_str(123)) # false
 print(is_str(123.456)) # false

@@ -21,7 +21,7 @@ In for loop we have 2 varients.
 With range we can specify the start, end and step value.
 If step value is not provided then it will be 1.
 
-```py
+```rn linenums="1" title="for.rn"
 for i=0 to 10 {
     print(i)
 }
@@ -29,7 +29,7 @@ for i=0 to 10 {
 
 **Output:**
 
-```py
+```bash
 0
 1
 2
@@ -44,7 +44,7 @@ for i=0 to 10 {
 
 With step value. Here we are printing the even numbers.
 
-```py
+```rn linenums="1" title="for_step.rn"
 for i=0 to 10 step 2 {
     print(i)
 }
@@ -52,7 +52,7 @@ for i=0 to 10 step 2 {
 
 **Output:**
 
-```py
+```bash
 0
 2
 4
@@ -68,7 +68,7 @@ The loop will run for each element.
 Here we are using `Array` of elements.
 The loop will run for each element in the `Array`.
 
-```py
+```rn linenums="1" title="for_array.rn"
 for i in [1, 2, 3, 4, 5] {
     print(i)
 }
@@ -76,7 +76,7 @@ for i in [1, 2, 3, 4, 5] {
 
 **Output**
 
-```py
+```bash
 1
 2
 3
@@ -86,7 +86,7 @@ for i in [1, 2, 3, 4, 5] {
 
 Here we are using `String`. The loop will run for each character in the `String`.
 
-```py
+```rn linenums="1" title="for_string.rn"
 for i in "Hello" {
     print(i)
 }
@@ -94,7 +94,7 @@ for i in "Hello" {
 
 **Output:**
 
-```py
+```bash
 H
 e
 l
@@ -104,7 +104,7 @@ o
 
 Here we are using `HashMap`. The loop will run for each key in the `HashMap`.
 
-```py
+```rn linenums="1" title="for_hashmap.rn"
 hash = {"name": "John", "age": 30}
 for i in hash {
     print("Key: " + i)
@@ -114,7 +114,7 @@ for i in hash {
 
 **Output:**
 
-```py
+```bash
 Key: name
 Value: John
 Key: age
@@ -126,7 +126,7 @@ Value: 30
 With while loop we can specify the condition.
 The loop will run until the condition is true.
 
-```py
+```rn linenums="1" title="while.rn"
 i = 0
 while i < 5 {
     print(i)
@@ -136,7 +136,7 @@ while i < 5 {
 
 **Output:**
 
-```py
+```bash
 0
 1
 2
@@ -160,7 +160,7 @@ With `break` we can exit the loop.
 
 For loop example:
 
-```py
+```rn linenums="1" title="for_break.rn"
 for i=0 to 10 {
     if i == 5 {
         break
@@ -171,7 +171,7 @@ for i=0 to 10 {
 
 **Output:**
 
-```py
+```bash
 0
 1
 2
@@ -181,7 +181,7 @@ for i=0 to 10 {
 
 While loop example:
 
-```py
+```rn linenums="1" title="while_break.rn"
 i = 0
 while i < 10 {
     if i == 5 {
@@ -194,7 +194,7 @@ while i < 10 {
 
 **Output:**
 
-```py
+```bash
 0
 1
 2
@@ -208,7 +208,7 @@ With `continue` we can skip the current iteration and move to the next iteration
 
 For loop example:
 
-```py
+```rn linenums="1" title="for_continue.rn"
 for i=0 to 5 {
     if i == 3 {
         continue
@@ -219,7 +219,7 @@ for i=0 to 5 {
 
 **Output:**
 
-```py
+```bash
 0
 1
 2
@@ -228,7 +228,7 @@ for i=0 to 5 {
 
 While loop example:
 
-```py
+```rn linenums="1" title="while_continue.rn"
 i = 0
 while i < 5 {
     if i == 3 {
@@ -242,7 +242,7 @@ while i < 5 {
 
 **Output:**
 
-```py
+```bash
 0
 1
 2

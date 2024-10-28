@@ -100,6 +100,12 @@ copyright: Build with love for the community © 2023-2024
 plugins:
   - search
 
+extra_javascript:
+  - 'assets/radon-highlight.js'
+
+extra_css:
+  - 'assets/extra.css'
+
 nav:
   - Overview: index.md
   - Installation: installation.md
@@ -145,7 +151,6 @@ markdown_extensions:
 
   - pymdownx.highlight:
       anchor_linenums: true
-      line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets

@@ -10,12 +10,12 @@ In Radon, `try-catch` blocks are used for error handling. The `try` block
 contains the code that may throw an exception. The `catch` block contains
 the code that handles the exception.
 
-```js linenums="1" title="exceptions.rn"
+```rn linenums="1" title="exceptions.rn"
 try {
-    // code that may throw an exception (in this case, zero division)
+    # code that may throw an exception (in this case, zero division)
     a = 1 / 0
 } catch as err {
-    // code that handles the exception
+    # code that handles the exception
     print("Exception caught: " + err)
 }
 ```
@@ -30,12 +30,12 @@ Don't forget to use the `as` keyword to assign the exception to a variable.
 The variable can be used to get the exception message. If you don't want to
 use the exception message, you can omit the variable.
 
-```js linenums="1" title="exceptions.rn"
+```rn linenums="1" title="exceptions.rn"
 try {
-    // code that may throw an exception
+    # code that may throw an exception
     a = 1 / 0
 } catch as _ {
-    // code that handles the exception
+    # code that handles the exception
     print("Exception caught")
 }
 ```
@@ -52,7 +52,7 @@ In Radon, errors can be raised explicitly using the `raise` keyword. This is use
 
 Radon has a standard `radiation` module for Error Types (you can type `radiation.errors` in the shell to view a list of available error types)
 
-```js linenums="1" title="exceptions.rn"
+```rn linenums="1" title="exceptions.rn"
 import radiation
 
 if 2 != 4 {
@@ -62,7 +62,7 @@ if 2 != 4 {
 
 **Output:**
 
-```py
+```rn
 Radiation (most recent call last):
   File <stdin>, line 2
 ValueError: 2 + 2 != 4
@@ -79,7 +79,7 @@ error message.
 
 ## Example
 
-```js linenums="1" title="custom-error.rn"
+```rn linenums="1" title="custom-error.rn"
 fun CustomError(file) {
     return "Something went wrong in " + file
 }
@@ -89,7 +89,7 @@ raise CustomError("custom-error.rn")
 
 **Output:**
 
-```py
+```rn
 Radiation (most recent call last):
   File <stdin>, line 5
 FunctionError: Something went wrong in custom-error.rn
