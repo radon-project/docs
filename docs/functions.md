@@ -15,7 +15,7 @@ In Radon, there are three types of functions:
 
 ### Named functions
 
-```js linenums="1" title="named_functions.rn"
+```rn linenums="1" title="named_functions.rn"
 fun add(a, b) {
     return a + b
 }
@@ -23,7 +23,7 @@ fun add(a, b) {
 
 ### Anonymous functions
 
-```js linenums="1" title="anonymous_functions.rn"
+```rn linenums="1" title="anonymous_functions.rn"
 add = fun (a, b) {
     return a + b
 }
@@ -31,7 +31,7 @@ add = fun (a, b) {
 
 ### One-liner functions
 
-```js linenums="1" title="one_liner_functions.rn"
+```rn linenums="1" title="one_liner_functions.rn"
 fun add(a, b) -> a + b
 ```
 
@@ -40,7 +40,7 @@ fun add(a, b) -> a + b
 Calling a function is done by using the function name followed by the arguments
 in parentheses.
 
-```py linenums="1" title="calling_functions.rn"
+```rn linenums="1" title="calling_functions.rn"
 add(1, 2) # Output: 3
 ```
 
@@ -54,7 +54,7 @@ The parameters are optional.
 
 We can also leave out the parentheses if there are no parameters.
 
-```py linenums="1" title="function_parameters.rn"
+```rn linenums="1" title="function_parameters.rn"
 fun say_hello(name) {
     print("Hello, " + name + "!")
 }
@@ -67,7 +67,7 @@ say_hello("World") # Output: Hello, World!
 Default parameters are used to assign a default value to a parameter. If the
 parameter is not passed, the default value is used.
 
-```py linenums="1" title="default_parameters.rn"
+```rn linenums="1" title="default_parameters.rn"
 fun new_user(name="Guest") {
     print("Hello, " + name + "!")
 }

@@ -8,7 +8,7 @@ statement is used to execute code if the condition is false. The `elif`
 statement is used to execute code if the condition is false and another
 condition is true. The `else` statement is optional.
 
-```js linenums="1" title="conditional-statements.rn"
+```rn linenums="1" title="conditional-statements.rn"
 if true {
   print("true")
 
@@ -17,7 +17,7 @@ if true {
 }
 ```
 
-```js linenums="1" title="conditional-statements.rn"
+```rn linenums="1" title="conditional-statements.rn"
 if true {
     print("true")
 

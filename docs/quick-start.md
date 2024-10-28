@@ -18,6 +18,6 @@ The first program that most people write in a new language is the "Hello World"
 program. This program simply prints the words "Hello World" to the screen. Here
 is the "Hello World" program in Radon:
 
-```py linenums="1" title="HelloWorld.rn"
+```rn linenums="1" title="hello_world.rn"
 print("Hello World")
 ```

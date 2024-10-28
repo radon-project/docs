@@ -19,7 +19,7 @@ Let's start by creating a class. We can create a class using the `class`
 keyword. It is followed by the name of the class and the body of the class.
 The body of the class is enclosed in curly braces.
 
-```py linenums="1" title="classes.rn"
+```rn linenums="1" title="classes.rn"
 class Person {
     # Class body
 }
@@ -31,7 +31,7 @@ Now that we have created a class, we can create an object. We can create an
 object by simply calling the class like as a function. It is followed by the
 name of the class and the arguments in parentheses. The arguments are optional.
 
-```js linenums="1" title="objects.rn"
+```rn linenums="1" title="objects.rn"
 person = Person()
 ```
 
@@ -43,7 +43,7 @@ to each instance of the class. They are declared using the `var` keyword. It
 is followed by the name of the field and the type of the field.
 The type of the field is optional.
 
-```js linenums="1" title="fields.rn"
+```rn linenums="1" title="fields.rn"
 class Person {
     name = "John"
     age = 20
@@ -57,7 +57,7 @@ class. They are called when an object is created. They are declared using the
 `fun` keyword. It is followed by the name (class name) of the constructor and
 the parameters in parentheses. The parameters are optional.
 
-```js linenums="1" title="constructors.rn"
+```rn linenums="1" title="constructors.rn"
 class Person {
     fun Person(name, age) {
         this.name = name
@@ -75,7 +75,7 @@ define the behavior of the class. They are declared using the `fun` keyword.
 It is followed by the name of the method, the parameters in parentheses, and
 the return type. The parameters and the return type are optional.
 
-```py linenums="1" title="methods.rn"
+```rn linenums="1" title="methods.rn"
 class Person {
     fun __constructor__(name, age) {
         this.name = name
