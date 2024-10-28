@@ -1,0 +1,43 @@
+.hljs-keyword {
+    color: #007acc;
+    /* Brighter shade for keywords */
+    font-style: italic;
+}
+
+.hljs-string {
+    color: #d14;
+}
+
+.hljs-number {
+    color: #c92c2c;
+}
+
+.hljs-comment {
+    color: #6a737d;
+    /* Softer gray for comments */
+    font-style: italic;
+}
+
+.hljs-function {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.hljs-identifier {
+    color: #2a7bde;
+}
+
+.hljs-operator {
+    color: #8b7f7f;
+    font-weight: bold;
+}
+
+.hljs-special {
+    color: rgb(255, 187, 0);
+    font-weight: bold;
+}
+
+.hljs-fncall {
+    color: #1c92d2;
+    font-weight: bold;
+}

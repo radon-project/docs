@@ -929,21 +929,21 @@ feature, such as a user interface.</p>
 is the name of the module. The name should have to be in Pascal Case <code>PascalCase</code>.
 The module have to implement the same name class as the file name. The class
 name should have to be in Pascal Case <code>PascalCase</code>.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hello.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hello.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Hello</span> <span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">fun</span> <span class="n">__constructor__</span><span class="p">()</span> <span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="p">}</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>class Hello {
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    fun __constructor__() {
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        print(&quot;Hello, World!&quot;)
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    }
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>}
+</code></pre></div></td></tr></table></div>
 <h2 id="importing-a-module">Importing a Module<a class="headerlink" href="#importing-a-module" title="Permanent link">&para;</a></h2>
 <p>A module is imported by using the <code>include</code> keyword. It is followed by the name
 of the module. The name of the module should have to be in Pascal Case <code>PascalCase</code>.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">importing.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">Hello</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>import Hello
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -1041,6 +1041,8 @@ of the module. The name of the module should have to be in Pascal Case <code>Pas
     
     
       <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="assets/radon-highlight.js"></script>
       
     
   </body>

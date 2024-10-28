@@ -958,7 +958,7 @@ while still being powerful enough to be used for most tasks.</p>
 <li>Easy to use graphics library (Future feature)</li>
 </ul>
 <h2 id="login-logic">Login Logic<a class="headerlink" href="#login-logic" title="Permanent link">&para;</a></h2>
-<div class="language-js highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Login.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Login.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -981,31 +981,31 @@ while still being powerful enough to be used for most tasks.</p>
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
 <span class="normal"><a href="#__codelineno-0-22">22</a></span>
 <span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="err">#</span><span class="w"> </span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">Radon</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">Radon</span><span class="w"> </span><span class="nx">Programming</span><span class="w"> </span><span class="nx">Language</span><span class="p">.</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Network</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">fun</span><span class="w"> </span><span class="nx">__constructor__</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">username</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">password</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nx">fun</span><span class="w"> </span><span class="nx">login</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">username</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;radon&quot;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">password</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">                </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Log in successful&quot;</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Invalid credentials&quot;</span><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="p">}</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nx">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">(</span><span class="s2">&quot;Enter you username: &quot;</span><span class="p">)</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nx">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">(</span><span class="s2">&quot;Enter your password: &quot;</span><span class="p">)</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nx">network</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Network</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">)</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="nx">network</span><span class="p">.</span><span class="nx">login</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a># This is a Radon test file for the Radon Programming Language.
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>class Network {
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    fun __constructor__(username, password) {
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        this.username = username
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        this.password = password
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    }
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    fun login() {
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        if this.username == &quot;radon&quot; {
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>            if this.password == &quot;password&quot; {
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>                print(&quot;Log in successful&quot;)
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>            }
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>        } else {
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>            print(&quot;Invalid credentials&quot;)
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        }
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    }
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>}
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>username = input(&quot;Enter you username: &quot;)
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>password = input(&quot;Enter your password: &quot;)
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>network = Network(username, password)
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>network.login()
+</code></pre></div></td></tr></table></div>
 <h2 id="sponsors">Sponsors<a class="headerlink" href="#sponsors" title="Permanent link">&para;</a></h2>
 <p>No sponsors yet. Be the first one to sponsor this project.
 <a href="https://linkedin.com/in/md-almasali" target="_blank" title="Contact the author">Become a sponsor</a></p>
@@ -1106,6 +1106,8 @@ while still being powerful enough to be used for most tasks.</p>
     
     
       <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="assets/radon-highlight.js"></script>
       
     
   </body>

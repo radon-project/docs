@@ -940,9 +940,9 @@ a simple way to read and write files. In this section, we will learn how to
 read and write files in Radon.</p>
 <blockquote>
 <p><strong>SECURITY NOTICE:</strong> Executing any file operations will prompt the user for confirmation before proceeding, for example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[DISK_ACCESS] This program is attempting to access the disk. Continue execution?
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Y/n] -&gt; _
-</span></code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[DISK_ACCESS] This program is attempting to access the disk. Continue execution?
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Y/n] -&gt; _
+</code></pre></div></p>
 </blockquote>
 <h2 id="file-modes">File modes<a class="headerlink" href="#file-modes" title="Permanent link">&para;</a></h2>
 <p>When opening a file, we can specify the mode in which we want to open the file.</p>
@@ -967,45 +967,45 @@ read and write files in Radon.</p>
 <p>To manipulate files in Radon, we use built-in <code>File</code> class. We can create a new
 instance of <code>File</code> class by passing the file path to the constructor. We can
 then use the <code>read</code> method to read the contents of the file.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>file = File(&quot;file.txt&quot;)
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>content = file.read()
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>print(content)
+</code></pre></div></td></tr></table></div>
 <p>You can also read the file line by line using the <code>readline</code> method.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">line</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>file = File(&quot;file.txt&quot;)
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>line = file.readline()
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>print(line)
+</code></pre></div></td></tr></table></div>
 <p>You can also read all the lines of the file using the <code>readlines</code> method.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>file = File(&quot;file.txt&quot;)
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>lines = file.readlines()
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>print(lines)
+</code></pre></div></td></tr></table></div>
 <h2 id="writing-to-a-file">Writing to a file<a class="headerlink" href="#writing-to-a-file" title="Permanent link">&para;</a></h2>
 <p>To write to a file, we use the <code>write</code> method. We can pass the content to the
 <code>write</code> method to write to the file.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>file = File(&quot;file.txt&quot;)
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>file.write(&quot;Hello, World!&quot;)
+</code></pre></div></td></tr></table></div>
 <h2 id="closing-a-file">Closing a file<a class="headerlink" href="#closing-a-file" title="Permanent link">&para;</a></h2>
 <p>After reading or writing to a file, it is important to close the file. We can
 use the <code>close</code> method to close the file.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">file</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="s2">&quot;file.txt&quot;</span><span class="p">)</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="c1"># code that reads or writes to the file</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>file = File(&quot;file.txt&quot;)
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a># code that reads or writes to the file
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>file.close()
+</code></pre></div></td></tr></table></div>
 <p>Check the file is closed or not using the <code>is_closed</code> method.</p>
-<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">file</span><span class="o">.</span><span class="n">is_closed</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>file.is_closed()
+</code></pre></div></td></tr></table></div>
 <p>That's it! You now know how to read and write files in Radon.</p>
 
 
@@ -1104,6 +1104,8 @@ use the <code>close</code> method to close the file.</p>
     
     
       <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="assets/radon-highlight.js"></script>
       
     
   </body>
