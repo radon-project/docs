@@ -920,8 +920,7 @@
 <h2 id="basic-types">Basic types<a class="headerlink" href="#basic-types" title="Permanent link">&para;</a></h2>
 <p>The basic types are:</p>
 <ul>
-<li><code>int</code> - integer number.</li>
-<li><code>float</code> - floating point number.</li>
+<li><code>number</code> - floating point number</li>
 <li><code>bool</code> - boolean value.</li>
 <li><code>string</code> - string of characters.</li>
 </ul>
@@ -935,21 +934,18 @@ of the elements it contains.</p>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span>
-<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>a = [1, 2, 3] # a is an array of ints
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>b = [1.0, 2.0, 3.0] # b is an array of floats
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>c = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] # c is an array of strings
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a># Arrays can be nested
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>d = [[1, 2], [3, 4]] # d is an array of arrays of ints
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a># Arrays can be empty
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>e = [] # e is an empty array of unknown type
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>a = [1, 2, 3] # a is an array of numbers
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>c = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] # c is an array of strings
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a># Arrays can be nested
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>d = [[1, 2], [3, 4]] # d is an array of arrays of ints
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a># Arrays can be empty
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>e = [] # e is an empty array of unknown type
 </code></pre></div></td></tr></table></div>
 <h2 id="hashmaps">Hashmaps<a class="headerlink" href="#hashmaps" title="Permanent link">&para;</a></h2>
-<p>Hashmaps (or objects) are declared using the <code>{}</code> syntax.
-The type of the object is the type of the fields it contains.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">objects.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<p>Hashmaps are declared using the <code>{}</code> syntax.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hashmaps.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -962,20 +958,20 @@ The type of the object is the type of the fields it contains.</p>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
 <span class="normal"><a href="#__codelineno-1-12">12</a></span>
 <span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a># a is an object with fields x and y of type int
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>a = { x: 1, y: 2 };
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a># b is an object with fields x and y of type float
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>b = { x: 1.0, y: 2.0 };
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a># c is an object with fields x and y of type string
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>c = { x: &quot;a&quot;, y: &quot;b&quot; };
+<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>const a = { &quot;x&quot;: 1, &quot;y&quot;: 2 }
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>const b = { &quot;x&quot;: 1.0, &quot;y&quot;: 2.0 }
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>const c = { &quot;x&quot;: &quot;a&quot;, &quot;y&quot;: &quot;b&quot; }
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a># Hashmaps can be nested
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>const d = { &quot;x&quot;: { &quot;y&quot;: 1, &quot;z&quot;: 2 }, &quot;w&quot;: { &quot;y&quot;: 3, &quot;z&quot;: 4 } }
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a># Objects can be nested
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a># d is an object with fields x and w of type object
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>d = { x: { y: 1, z: 2 }, w: { y: 3, z: 4 } };
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a># Objects can be empty
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a># e is an empty object of unknown type
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>e = {};
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a># Hashmaps can be empty
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>const e = {}
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a># Hashmaps can be initialized with keys known at runtime
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>const key = &quot;foo&quot;
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>const f = {key: &quot;bar&quot;}
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>print(f[&quot;foo&quot;]) # -&gt; bar
 </code></pre></div></td></tr></table></div>
 
 

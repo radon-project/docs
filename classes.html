@@ -544,18 +544,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#constructors" class="md-nav__link">
+  <a href="#methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructors
+      Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#magic-methodsoperator-overloading" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods
+      Magic Methods/Operator Overloading
     </span>
   </a>
   
@@ -933,18 +933,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#constructors" class="md-nav__link">
+  <a href="#methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructors
+      Methods
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#magic-methodsoperator-overloading" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods
+      Magic Methods/Operator Overloading
     </span>
   </a>
   
@@ -976,7 +976,7 @@
 and their interactions to design and program applications. It is based on the
 concept of objects rather than just functions and procedures. These objects
 are organized into classes, which allow individual objects to be grouped
-together. Most modern programming languages including Java, C/C++, and Python
+together. Most modern programming languages including Java, C++, and Python
 are object-oriented languages, and many older programming languages now have
 object-oriented versions.</p>
 <p>In Radon, we also have support for OOP. We can create classes and objects.
@@ -995,74 +995,157 @@ The body of the class is enclosed in curly braces.</p>
 <p>Now that we have created a class, we can create an object. We can create an
 object by simply calling the class like as a function. It is followed by the
 name of the class and the arguments in parentheses. The arguments are optional.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">objects.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>person = Person()
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">objects.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>const person = Person()
 </code></pre></div></td></tr></table></div>
 <h2 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h2>
 <p>Fields are the variables that are declared inside a class. They are used to
 store data. They are also called instance variables because they are unique
-to each instance of the class. They are declared using the <code>var</code> keyword. It
-is followed by the name of the field and the type of the field.
-The type of the field is optional.</p>
+to each instance of the class. They are declared like any variable.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">fields.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>class Person {
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    name = &quot;John&quot;
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    age = 20
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    var name = &quot;John&quot;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    var age = 20
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>}
-</code></pre></div></td></tr></table></div>
-<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
-<p>Constructors are special methods that are used to initialize the fields of a
-class. They are called when an object is created. They are declared using the
-<code>fun</code> keyword. It is followed by the name (class name) of the constructor and
-the parameters in parentheses. The parameters are optional.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">constructors.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>class Person {
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    fun Person(name, age) {
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        this.name = name
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>        this.age = age
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    }
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>}
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>person = Person(&quot;John&quot;, 20)
 </code></pre></div></td></tr></table></div>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <p>Methods are the functions that are declared inside a class. They are used to
 define the behavior of the class. They are declared using the <code>fun</code> keyword.
 It is followed by the name of the method, the parameters in parentheses, and
 the return type. The parameters and the return type are optional.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">methods.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>class Person {
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    fun __constructor__(name, age) {
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>        this.name = name
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        this.age = age
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    }
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    fun say_hello() {
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>        print(&quot;Hello, &quot; + this.name + &quot;!&quot;)
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    }
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>}
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>person = Person(&quot;John&quot;, 20)
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>person.say_hello() # Output: Hello, John!
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">methods.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>class Person {
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    fun __constructor__(name, age) {
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        this.name = name
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>        this.age = age
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    }
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    fun say_hello() {
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>        print(&quot;Hello, &quot; + this.name + &quot;!&quot;)
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    }
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>}
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>person = Person(&quot;John&quot;, 20)
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>person.say_hello() # Output: Hello, John!
 </code></pre></div></td></tr></table></div>
+<h2 id="magic-methodsoperator-overloading">Magic Methods/Operator Overloading<a class="headerlink" href="#magic-methodsoperator-overloading" title="Permanent link">&para;</a></h2>
+<p>You may have noticed we declared a method called <code>__constructor__</code> in the above example. This is an example of a magic method. Magic methods are used for operator overloading. Here is an incomplete list:</p>
+<table>
+<thead>
+<tr>
+<th>Method Name</th>
+<th>Operator</th>
+<th>Example</th>
+<th>Example if we used regular function calls instead of operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__constructor__</code></td>
+<td>Class instantiation</td>
+<td><code>var foo = Foo(1, 2, 3)</code></td>
+<td><code>var foo = create(Foo); foo.__constructor(1, 2, 3)</code><sup id="fnref:create_func"><a class="footnote-ref" href="#fn:create_func">1</a></sup></td>
+</tr>
+<tr>
+<td><code>__add__</code></td>
+<td>Addition</td>
+<td><code>a + b</code></td>
+<td><code>a.__add__(b)</code></td>
+</tr>
+<tr>
+<td><code>__sub__</code></td>
+<td>Subtraction</td>
+<td><code>a - b</code></td>
+<td><code>a.__sub__(b)</code></td>
+</tr>
+<tr>
+<td><code>__mul__</code></td>
+<td>Multiplication</td>
+<td><code>a * b</code></td>
+<td><code>a.__mul__(b)</code></td>
+</tr>
+<tr>
+<td><code>__div__</code></td>
+<td>Division</td>
+<td><code>a / b</code></td>
+<td><code>a.__div__(b)</code></td>
+</tr>
+<tr>
+<td><code>__pow__</code></td>
+<td>Exponentiation</td>
+<td><code>a ^ b</code></td>
+<td><code>a.__pow__(b)</code></td>
+</tr>
+<tr>
+<td><code>__eq__</code></td>
+<td>Equality</td>
+<td><code>a == b</code></td>
+<td><code>a.__eq__(b)</code></td>
+</tr>
+<tr>
+<td><code>__ne__</code></td>
+<td>Non-equality</td>
+<td><code>a != b</code></td>
+<td><code>a.__ne__(b)</code></td>
+</tr>
+<tr>
+<td><code>__call__</code></td>
+<td>Calling</td>
+<td><code>f(1, 2, 3)</code></td>
+<td><code>f.__call__(1, 2, 3)</code></td>
+</tr>
+<tr>
+<td><code>__getitem__</code></td>
+<td>Subscripting</td>
+<td><code>a[b]</code></td>
+<td><code>a.__getitem__(b)</code></td>
+</tr>
+<tr>
+<td><code>__setitem__</code></td>
+<td>Subscripting</td>
+<td><code>a[b] = c</code></td>
+<td><code>a.__setitem(b, c)</code></td>
+</tr>
+<tr>
+<td><code>__contains__</code></td>
+<td><code>in</code></td>
+<td><code>a in b</code></td>
+<td><code>b.__contains__(a)</code></td>
+</tr>
+<tr>
+<td><code>__truthy__</code></td>
+<td>Implicit conversions to bool</td>
+<td><code>if x { ... }</code></td>
+<td><code>if x.__truthy__() { ... }</code><sup id="fnref:truthy_errors"><a class="footnote-ref" href="#fn:truthy_errors">2</a></sup><sup id="fnref:truthy_recursion"><a class="footnote-ref" href="#fn:truthy_recursion">3</a></sup></td>
+</tr>
+</tbody>
+</table>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:create_func">
+<p><code>create</code> doesn't actually exist. It's just pseudocode&#160;<a class="footnote-backref" href="#fnref:create_func" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:truthy_errors">
+<p>If <code>__truthy__</code> throws an error, it is ignored and treated as if it returned <code>false</code>&#160;<a class="footnote-backref" href="#fnref:truthy_errors" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:truthy_recursion">
+<p>The <code>__truthy__</code> operator of the returned object will be called recursively until it is a <code>bool</code>&#160;<a class="footnote-backref" href="#fnref:truthy_recursion" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 

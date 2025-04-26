@@ -950,7 +950,7 @@ the code that handles the exception.</p>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>try {
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>    # code that may throw an exception (in this case, zero division)
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    a = 1 / 0
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    1 / 0
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>} catch as err {
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>    # code that handles the exception
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>    print(&quot;Exception caught: &quot; + err)
@@ -970,7 +970,7 @@ use the exception message, you can omit the variable.</p>
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>try {
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>    # code that may throw an exception
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    a = 1 / 0
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    1 / 0
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>} catch as _ {
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>    # code that handles the exception
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>    print(&quot;Exception caught&quot;)
@@ -995,10 +995,10 @@ use the exception message, you can omit the variable.</p>
 <p><strong>Output:</strong></p>
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Radiation (most recent call last):
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  File &lt;stdin&gt;, line 2
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>ValueError: 2 + 2 != 4
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>ValueError: 2 != 4
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    raise radiation.ValueError(&quot;2 + 2 != 4&quot;)
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    raise radiation.ValueError(&quot;2 != 4&quot;)
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 </code></pre></div>
 <h2 id="defining-custom-error-types">Defining custom error types<a class="headerlink" href="#defining-custom-error-types" title="Permanent link">&para;</a></h2>
 <p>To define custom errors, you need to define a function that returns a string as the
@@ -1017,7 +1017,7 @@ error message.</p>
 <p><strong>Output:</strong></p>
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Radiation (most recent call last):
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  File &lt;stdin&gt;, line 5
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>FunctionError: Something went wrong in custom-error.rn
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>CustomError: Something went wrong in custom-error.rn
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>raise CustomError(&quot;custom-error.rn&quot;)
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

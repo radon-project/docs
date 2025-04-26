@@ -946,7 +946,7 @@ read and write files in Radon.</p>
 </blockquote>
 <h2 id="file-modes">File modes<a class="headerlink" href="#file-modes" title="Permanent link">&para;</a></h2>
 <p>When opening a file, we can specify the mode in which we want to open the file.</p>
-<p>The modes are:</p>
+<p>The modes are the same as in C fopen() or Python open():</p>
 <ul>
 <li><code>r</code>: Read mode. Opens the file for reading. The file must exist.</li>
 <li><code>w</code>: Write mode. Opens the file for writing. If the file does not exist,
@@ -969,29 +969,29 @@ instance of <code>File</code> class by passing the file path to the constructor.
 then use the <code>read</code> method to read the contents of the file.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>file = File(&quot;file.txt&quot;)
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>content = file.read()
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>const file = File(&quot;file.txt&quot;)
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>const content = file.read()
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>print(content)
 </code></pre></div></td></tr></table></div>
 <p>You can also read the file line by line using the <code>readline</code> method.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>file = File(&quot;file.txt&quot;)
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>line = file.readline()
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>const file = File(&quot;file.txt&quot;)
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>const line = file.readline()
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>print(line)
 </code></pre></div></td></tr></table></div>
 <p>You can also read all the lines of the file using the <code>readlines</code> method.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>file = File(&quot;file.txt&quot;)
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>lines = file.readlines()
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>const file = File(&quot;file.txt&quot;)
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>const lines = file.readlines()
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>print(lines)
 </code></pre></div></td></tr></table></div>
 <h2 id="writing-to-a-file">Writing to a file<a class="headerlink" href="#writing-to-a-file" title="Permanent link">&para;</a></h2>
 <p>To write to a file, we use the <code>write</code> method. We can pass the content to the
 <code>write</code> method to write to the file.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>file = File(&quot;file.txt&quot;)
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>const file = File(&quot;file.txt&quot;, &quot;w&quot;)
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>file.write(&quot;Hello, World!&quot;)
 </code></pre></div></td></tr></table></div>
 <h2 id="closing-a-file">Closing a file<a class="headerlink" href="#closing-a-file" title="Permanent link">&para;</a></h2>
@@ -999,7 +999,7 @@ then use the <code>read</code> method to read the contents of the file.</p>
 use the <code>close</code> method to close the file.</p>
 <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">file-handling.rn</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>file = File(&quot;file.txt&quot;)
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>const file = File(&quot;file.txt&quot;, &quot;r&quot;)
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a># code that reads or writes to the file
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>file.close()
 </code></pre></div></td></tr></table></div>
