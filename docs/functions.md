@@ -24,7 +24,7 @@ fun add(a, b) {
 ### Anonymous functions
 
 ```rn linenums="1" title="anonymous_functions.rn"
-add = fun (a, b) {
+const add = fun (a, b) {
     return a + b
 }
 ```
@@ -38,10 +38,15 @@ fun add(a, b) -> a + b
 ## Calling functions
 
 Calling a function is done by using the function name followed by the arguments
-in parentheses.
+in parentheses, like in all C-like languages.
 
 ```rn linenums="1" title="calling_functions.rn"
 add(1, 2) # Output: 3
+```
+
+There are also keyword arguments:
+```rn linenums="1" title="kwargs.rn"
+add(a=34, b=35) # Output: 69
 ```
 
 That's it! You now know how to call functions in Radon.
@@ -74,4 +79,19 @@ fun new_user(name="Guest") {
 
 new_user() # Output: Hello, Guest!
 new_user("World") # Output: Hello, World!
+```
+
+## Variadic parameters
+```rn linenums="1" title="variadics.rn"
+fun sum(...nums) {
+    var ret = 0
+    for x in nums {
+        ret += x
+    }
+    return ret
+}
+
+sum(1, 2, 3) # Output: 6
+sum(1, 2, 3, 4) # Output: 10
+sum() # Output: 0
 ```

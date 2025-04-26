@@ -14,7 +14,7 @@ read and write files in Radon.
 
 When opening a file, we can specify the mode in which we want to open the file.
 
-The modes are:
+The modes are the same as in C fopen() or Python open():
 
 - `r`: Read mode. Opens the file for reading. The file must exist.
 - `w`: Write mode. Opens the file for writing. If the file does not exist,
@@ -39,24 +39,24 @@ instance of `File` class by passing the file path to the constructor. We can
 then use the `read` method to read the contents of the file.
 
 ```rn linenums="1" title="file-handling.rn"
-file = File("file.txt")
-content = file.read()
+const file = File("file.txt")
+const content = file.read()
 print(content)
 ```
 
 You can also read the file line by line using the `readline` method.
 
 ```rn linenums="1" title="file-handling.rn"
-file = File("file.txt")
-line = file.readline()
+const file = File("file.txt")
+const line = file.readline()
 print(line)
 ```
 
 You can also read all the lines of the file using the `readlines` method.
 
 ```rn linenums="1" title="file-handling.rn"
-file = File("file.txt")
-lines = file.readlines()
+const file = File("file.txt")
+const lines = file.readlines()
 print(lines)
 ```
 
@@ -66,7 +66,7 @@ To write to a file, we use the `write` method. We can pass the content to the
 `write` method to write to the file.
 
 ```rn linenums="1" title="file-handling.rn"
-file = File("file.txt")
+const file = File("file.txt", "w")
 file.write("Hello, World!")
 ```
 
@@ -76,7 +76,7 @@ After reading or writing to a file, it is important to close the file. We can
 use the `close` method to close the file.
 
 ```rn linenums="1" title="file-handling.rn"
-file = File("file.txt")
+const file = File("file.txt", "r")
 # code that reads or writes to the file
 file.close()
 ```

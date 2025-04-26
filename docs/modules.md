@@ -12,23 +12,32 @@ feature, such as a user interface.
 ## Creating a Module
 
 A module is created by creating a file with the `.rn` extension. The file name
-is the name of the module. The name should have to be in Pascal Case `PascalCase`.
-The module have to implement the same name class as the file name. The class
-name should have to be in Pascal Case `PascalCase`.
+is the name of the module.
 
-```rn linenums="1" title="Hello.rn"
-class Hello {
-    fun __constructor__() {
-        print("Hello, World!")
-    }
+```rn linenums="1" title="hello.rn"
+const MESSAGE = "Hello, World!"
+
+fun print_msg() {
+    print(MESSAGE)
 }
 ```
 
 ## Importing a Module
 
-A module is imported by using the `include` keyword. It is followed by the name
-of the module. The name of the module should have to be in Pascal Case `PascalCase`.
+A module is imported by using the `import` keyword. It is followed by the name
+of the module.
 
 ```rn linenums="1" title="main.rn"
-import Hello
+import hello
+
+hello.print_msg()
 ```
+
+You can use the `from` keyword to import specific names from the module, as well as renaming them:
+```rn linenums="1" title="main.rn"
+from hello import MESSAGE, print_msg as pm
+
+pm()
+print(MESSAGE)
+```
+
