@@ -13,7 +13,7 @@ the code that handles the exception.
 ```rn linenums="1" title="exceptions.rn"
 try {
     # code that may throw an exception (in this case, zero division)
-    a = 1 / 0
+    1 / 0
 } catch as err {
     # code that handles the exception
     print("Exception caught: " + err)
@@ -33,7 +33,7 @@ use the exception message, you can omit the variable.
 ```rn linenums="1" title="exceptions.rn"
 try {
     # code that may throw an exception
-    a = 1 / 0
+    1 / 0
 } catch as _ {
     # code that handles the exception
     print("Exception caught")
@@ -65,10 +65,10 @@ if 2 != 4 {
 ```rn
 Radiation (most recent call last):
   File <stdin>, line 2
-ValueError: 2 + 2 != 4
+ValueError: 2 != 4
 
-    raise radiation.ValueError("2 + 2 != 4")
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    raise radiation.ValueError("2 != 4")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ```
 
@@ -92,7 +92,7 @@ raise CustomError("custom-error.rn")
 ```rn
 Radiation (most recent call last):
   File <stdin>, line 5
-FunctionError: Something went wrong in custom-error.rn
+CustomError: Something went wrong in custom-error.rn
 
 raise CustomError("custom-error.rn")
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

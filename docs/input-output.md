@@ -17,6 +17,6 @@ followed by the argument in parentheses. The argument are mandatory. It takes
 only one argument. We can concatenate data types using the `+` operator.
 
 ```rn linenums="1" title="input.rn"
-name = input("Enter your name: ")
+const name = input("Enter your name: ")
 print("Hello, " + name + "!") # Output: Hello, World!
 ```

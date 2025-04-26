@@ -105,7 +105,7 @@ o
 Here we are using `HashMap`. The loop will run for each key in the `HashMap`.
 
 ```rn linenums="1" title="for_hashmap.rn"
-hash = {"name": "John", "age": 30}
+const hash = {"name": "John", "age": 30}
 for i in hash {
     print("Key: " + i)
     print("Value: " + hash[i])
@@ -127,10 +127,10 @@ With while loop we can specify the condition.
 The loop will run until the condition is true.
 
 ```rn linenums="1" title="while.rn"
-i = 0
+var i = 0
 while i < 5 {
     print(i)
-    nonlocal i += 1
+    i += 1
 }
 ```
 
@@ -143,9 +143,6 @@ while i < 5 {
 3
 4
 ```
-
-We have used `nonlocal` keyword to update the value of `i` in the loop.
-If we don't use `nonlocal` then it will run into infinite loop.
 
 ## Loop control statements
 
@@ -229,14 +226,14 @@ for i=0 to 5 {
 While loop example:
 
 ```rn linenums="1" title="while_continue.rn"
-i = 0
+var i = 0
 while i < 5 {
     if i == 3 {
-        nonlocal i += 1
+        i += 1
         continue
     }
     print(i)
-    nonlocal i += 1
+    i += 1
 }
 ```
 

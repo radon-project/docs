@@ -13,7 +13,7 @@
   start index to the specified end index
 
 ```rn linenums="1" title="methods.rn"
-arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
 print(arr_len(arr)) # 5
 
 arr_push(arr, 6)
@@ -40,8 +40,8 @@ print(arr_slice(arr, 0, 5)) # [1, 2, 3, 4, 5]
 - `*` (repetition)
 
 ```rn linenums="1" title="operators.rn"
-arr1 = [1, 2, 3]
-arr2 = [4, 5, 6]
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
 
 print(arr1 + arr2) # [1, 2, 3, 4, 5, 6]
 print(arr1 * 2) # [1, 2, 3, 1, 2, 3]
