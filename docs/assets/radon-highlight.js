@@ -66,9 +66,10 @@ script1.onload = function () {
                     begin: '\\b\\w+(?=\\s*\\()'
                 },
                 // Multi-char operators before single-char to avoid partial matches
+                // //= before // before /=; ^= before ^ so they're one span
                 {
                     className: 'operator',
-                    begin: '->|\\+\\+|--|==|!=|<=|>=|-=|\\+=|\\*=|/=|%=|[+\\-*/%^=<>!]'
+                    begin: '->|\\+\\+|--|==|!=|<=|>=|//=|//|-=|\\+=|\\*=|/=|%=|\\^=|[+\\-*/%^=<>!]'
                 },
                 {
                     className: 'punctuation',
