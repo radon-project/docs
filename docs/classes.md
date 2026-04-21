@@ -86,7 +86,7 @@ You may have noticed we declared a method called `__constructor__` in the above 
 `__ne__` | Non-equality | `a != b` | `a.__ne__(b)` |
 `__call__` | Calling | `f(1, 2, 3)` | `f.__call__(1, 2, 3)` |
 `__getitem__` | Subscripting | `a[b]` | `a.__getitem__(b)` |
-`__setitem__` | Subscripting | `a[b] = c` | `a.__setitem(b, c)` |
+`__setitem__` | Subscripting | `a[b] = c` | `a.__setitem__(b, c)` |
 `__contains__` | `in` | `a in b` | `b.__contains__(a)` |
 `__truthy__` | Implicit conversions to bool | `if x { ... }` | `if x.__truthy__() { ... }`[^truthy_errors][^truthy_recursion]
 

@@ -1,23 +1,54 @@
-# Quick start
+# Quick Start
 
-To get started with Radon language you can use the built-in REPL or just run
-the Radon file. Run a Radon file by typing `radon -s <filename>.rn` in the
-command line. For example, if you have a file named `hello.rn` you can run it
-by typing `radon -s hello.rn` in the command line.
+Radon can be used in two ways today:
 
-## REPL
-
-The REPL is a command line interface that allows you to run Radon code
-interactively. To start the REPL, just type `radon` in the command line.
-You can then type Radon code and it will be executed immediately. To exit the
-REPL, just type `exit()` or press `Ctrl + Z`.
+- Start the REPL with `python radon.py`
+- Run a file with `python radon.py program.rn`
 
 ## Hello World
 
-The first program that most people write in a new language is the "Hello World"
-program. This program simply prints the words "Hello World" to the screen. Here
-is the "Hello World" program in Radon:
-
 ```rn linenums="1" title="hello_world.rn"
-print("Hello World")
+print("Hello, World!")
 ```
+
+Run it from the repository root:
+
+```bash
+python radon.py hello_world.rn
+```
+
+## REPL
+
+Start the REPL:
+
+```bash
+python radon.py
+```
+
+Exit with `exit()` or by typing `exit` at the prompt.
+
+## A Slightly Larger Example
+
+```rn linenums="1" title="example.rn"
+import io
+
+fun iseven(num) -> num % 2 == 0
+
+class Greeter {
+    fun __constructor__(name) {
+        this.name = name
+    }
+
+    fun greet() {
+        print("Hello, " + this.name)
+    }
+}
+
+var name = io.Input.get_string("Name: ")
+var greeter = Greeter(name)
+greeter.greet()
+print("Name length: " + str(str_len(name)))
+print("Even test: " + str(iseven(42)))
+```
+
+This example shows the current language model in practice: imports, functions, classes, methods, built-ins, and values from the standard library.

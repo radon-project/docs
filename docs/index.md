@@ -23,41 +23,44 @@ Maintained by [Md. Almas Ali][almas]
 
 ---
 
-**Website**: [https://radon-project.github.io][web]{:target="\_blank"}
+**Website**: [https://radon-project.github.io][web]{:target="_blank"}
 
-**Documentation**: [https://radon-project.github.io/docs][docs]{:target="\_blank"}
+**Documentation**: [https://radon-project.github.io/docs][docs]{:target="_blank"}
 
-**Github**: [https://github.com/radon-project/radon][github]{:target="\_blank"}
+**Source**: [https://github.com/radon-project/radon][github]{:target="_blank"}
 
 ---
 
-## Introduction
+## What Radon Includes Today
 
-Radon is a programming language that is designed to be easy to learn and use.
-It is a high-level language intended to be used for general purpose programming.
-It is designed to be easy to learn and use,
-while still being powerful enough to be used for most tasks.
+The current repository ships with:
 
-Some of the features of Radon include:
+- An interactive REPL in `radon.py`
+- File execution with `python radon.py program.rn`
+- Inline execution with `python radon.py -c 'print("hello")'`
+- Dynamic types including numbers, strings, booleans, arrays, hash maps, and null
+- Functions, classes, methods, modules, and `from ... import ...` support
+- A Radon standard library in `stdlib/`
+- A Python bridge through `pyapi()` with runtime permission prompts
 
-- A simple syntax that is easy to learn and use
-- Dynamic typing so that you don't have to worry about types
-- Powerful standard library that makes it easy to do common tasks (Development)
-- Easy to use package manager that makes it easy to install packages (Future feature)
-- Functional programming support
-- Object-oriented programming support (Development)
-- Easy to use concurrency support (Future feature)
-- Easy to use GUI library (Future feature)
-- Easy to use web development library (Future feature)
-- Advanced command line interface (Development)
-- Easy to use networking library (Future feature)
-- Easy to use database library (Future feature)
-- Easy to use graphics library (Future feature)
+## First Run
 
-## Login Logic
+```bash
+git clone https://github.com/radon-project/radon.git
+cd radon
+python radon.py
+```
 
-```rn linenums="1" title="Login.rn"
-# This is a Radon test file for the Radon Programming Language.
+To run a file instead of the REPL:
+
+```bash
+python radon.py examples/simple.rn
+```
+
+## Example
+
+```rn linenums="1" title="login.rn"
+import io
 
 class Network {
     fun __constructor__(username, password) {
@@ -69,6 +72,8 @@ class Network {
         if this.username == "radon" {
             if this.password == "password" {
                 print("Log in successful")
+            } else {
+                print("Invalid credentials")
             }
         } else {
             print("Invalid credentials")
@@ -76,20 +81,18 @@ class Network {
     }
 }
 
-username = input("Enter you username: ")
-password = input("Enter your password: ")
+var username = input("Enter your username: ")
+var password = io.Input.get_password("Enter your password: ")
 
-network = Network(username, password)
+var network = Network(username, password)
 network.login()
 ```
 
-## Sponsors
+## Notes on Permissions
 
-No sponsors yet. Be the first one to sponsor this project.
-[Become a sponsor][contact]{:target="\_blank"}
+Some capabilities delegate to Python or the host system. When a program uses the Python API, disk access, or network access, Radon can prompt before continuing. The CLI also exposes testing-only flags such as `--allow-py`, `--allow-disk`, and `--allow-network`.
 
 [almas]: https://github.com/Almas-Ali "Md. Almas Ali"
 [github]: https://github.com/radon-project/radon "Radon"
-[web]: https://radon-project.github.io/ "web"
+[web]: https://radon-project.github.io/ "Web"
 [docs]: https://radon-project.github.io/docs "Docs"
-[contact]: https://linkedin.com/in/md-almasali "Contact the author"

@@ -1,20 +1,31 @@
 # Strings
 
-## String methods
+## String built-in functions
 
-- `str_len()` - returns the length of the string.
-- `str_find(string, index)` - returns the character at the specified index.
-- `str_slice(string, start, end)` - returns the substring from the specified
-  start index to the specified end index
+- `str_len(string)` — returns the length of the string.
+- `str_get(string, index)` — returns the character at the specified index.
+- `str_find(string, value)` — returns the starting index of a substring, or `-1` if not found.
 
 ```rn linenums="1" title="methods.rn"
-const str = "Hello, World!"
+const s = "Hello, World!"
 
-print(str_len(str)) # 13
-print(str_find(str, 0)) # H
-print(str_find(str, 1)) # e
+print(str_len(s))           # 13
+print(str_get(s, 0))        # H
+print(str_get(s, 1))        # e
+print(str_find(s, "World")) # 7
+print(str_find(s, "xyz"))   # -1
+```
 
-print(str_slice(str, 0, 5)) # Hello
+## String slicing
+
+Strings support the same `[start:end:step]` slice syntax as arrays.
+
+```rn linenums="1" title="slicing.rn"
+const s = "Hello, World!"
+
+print(s[0:5])   # Hello
+print(s[7:])    # World!
+print(s[::-1])  # !dlroW ,olleH
 ```
 
 ## String operators

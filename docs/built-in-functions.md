@@ -1,80 +1,115 @@
 # Built-in Functions
 
-## Types of built-in functions
+Radon exposes a fixed set of interpreter built-ins. The list below reflects the functions currently registered in `core/builtin_funcs.py`.
 
-Built-in functions are the functions that are built into the language.
-They are used to perform common tasks. In Radon, there are a list of
-built-in functions that are available to use.
+## Console and Flow Control
 
-They are:
+- `print(value)` prints a value.
+- `print_ret(value)` returns the string form of a value.
+- `input(prompt)` reads a line of input.
+- `input_int()` reads an integer and keeps prompting until the input is valid.
+- `clear()` clears the terminal.
+- `cls()` is an alias for `clear()`.
+- `exit()` stops the current program.
 
-### Utility methods
+## Introspection
 
-- `cls()` - clears the screen.
-- `clear()` - clears the screen.
-- `exit()` - exits the program.
+- `len(value)` returns the length of a value when supported.
+- `type(value)` returns the Radon type wrapper for a value.
+- `help(obj)` prints the help representation of an object.
+- `dir(obj)` returns an array of visible names on a module or class-like object.
 
-### Shell commands
+## Type Conversion
 
-- `help(obj)` - get help about any object
-- `license()` - show project license
-- `credits()` - show project credits
+- `int(value)` converts a value to an integer.
+- `float(value)` converts a value to a float.
+- `str(value)` converts a value to a string.
+- `bool(value)` converts a value using Radon's truthiness rules.
 
-### Same as `import` statement
+## Type Checks
 
-- `require()` - same as include statement to include a file or
-  library in the current program.
+- `is_num(value)` returns whether the value is a number.
+- `is_int(value)` returns whether the value is an integer number.
+- `is_float(value)` returns whether the value is a floating-point number.
+- `is_str(value)` returns whether the value is a string.
+- `is_bool(value)` returns whether the value is a boolean.
+- `is_array(value)` returns whether the value is an array.
+- `is_fun(value)` returns whether the value is a function.
+- `is_null(value)` returns whether the value is null.
 
-### Command line arguments
+## Array Helpers
 
-- `sys_args()` - returns the command line arguments.
+- `arr_append(array, value)` appends a value to an array.
+- `arr_pop(array, index=-1)` removes and returns an element.
+- `arr_extend(arrayA, arrayB)` appends all elements from one array to another.
+- `arr_chunk(array, size)` groups an array into chunks.
+- `arr_get(array, index)` returns the element at an index.
+- `arr_len(array)` returns the number of elements.
 
-### API methods
+## String Helpers
 
-- `pyapi(string,ns)` - A high-level Python API for Radon.
-  It is used to call Python functions from Radon.
+- `str_len(string)` returns string length.
+- `str_find(string, value)` returns the index of a substring, or `-1`.
+- `str_get(string, index)` returns the character at an index.
 
-### Typecase methods
+## Runtime and Interop
 
-- `int()` - converts any value to an integer.
-- `float()` - converts any value to a float.
-- `str()` - converts any value to a string.
-- `bool()` - converts any value to a boolean.
-- `type()` - returns the type of the value.
+- `require(module)` executes a standard library module name or a `.rn` file path.
+- `pyapi(code, ns)` executes Python code with a Radon hash map used as the namespace bridge.
+- `time_now()` returns the current Unix timestamp.
 
-### Type checker methods
+`pyapi()` is permission-gated at runtime.
 
-- `is_num()` - returns `true` if the value is a number, otherwise `false`.
-- `is_int()` - returns `true` if the value is an integer, otherwise `false`.
-- `is_float()` - returns `true` if the value is a float, otherwise `false`.
-- `is_str()` - returns `true` if the value is a string, otherwise `false`.
-- `is_bool()` - returns `true` if the value is a boolean, otherwise `false`.
-- `is_array()` - returns `true` if the value is an array, otherwise `false`.
-- `is_fun()` - returns `true` if the value is a function, otherwise `false`.
+## Shell Helpers
 
-### String methods
+- `license()` prints the project license.
+- `credits()` prints the project credits.
+- `copyright()` prints the copyright banner.
 
-- `str_len()` - returns the length of the string.
-- `str_find(string, index)` - returns the character at the specified index.
-- `str_slice(string, start, end)` - returns the substring from the specified
-  start index to the specified end index.
+## Command-Line Arguments
 
-### I/O methods
+Radon does not expose a `sys_args()` built-in. The CLI stores process arguments in the global `argv` array before running user code.
 
-- `print()` - prints the specified value to the console.
-- `print_ret()` - prints the specified value to the console
-  and returns the value.
-- `input()` - reads a line from the console.
-- `input_int()` - reads an integer from the console.
+```rn linenums="1" title="argv.rn"
+for arg in argv {
+    print(arg)
+}
+```
 
-### Array methods
+---
 
-- `arr_len()` - returns the length of the array.
-- `arr_push(array, item)` - adds an item to the end of the array.
-- `arr_pop(array, index)` - removes an item from the end of the array.
-- `arr_append(array, item)` - adds an item to the end of the array.
-- `arr_extend(array1, array2)` - adds all the items of an array to the end
-  of the array.
-- `arr_find(array, index)` - returns the item at the specified index.
-- `arr_slice(array, start, end)` - returns the items from the specified start
-  index to the specified end index.
+## Built-in Classes
+
+The following class constructors are pre-loaded into the global scope without any import.
+
+### `File(path, mode)`
+
+Opens a file. Requires `disk_access` permission. Modes: `"r"` read, `"w"` write, `"a"` append. See the [file-handling guide](file-handling.md) for full usage.
+
+### `String(value)`
+
+Wraps a string with chainable helper methods (`len()`, `find()`, `join()`, `to_int()`, etc.). Identical to the object provided by `import string`.
+
+### `Json`
+
+Serialises and deserialises JSON. Can be used statically or as an instance:
+
+```rn linenums="1" title="json.rn"
+const text = Json.dumps({"key": "value"})
+const data = Json.loads(text)
+print(data["key"]) # value
+```
+
+### `Requests`
+
+HTTP client. Requires `network_access` permission.
+
+```rn linenums="1" title="requests.rn"
+var res = Requests.get("https://api.example.com/data")
+print(res.status_code)
+print(res.text)
+```
+
+### `builtins`
+
+Provides access to the built-in scope as an object. Used for reflection and tooling; not normally needed in application code.

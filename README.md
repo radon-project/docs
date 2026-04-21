@@ -1,37 +1,37 @@
-# Documentation of Radon
+# Radon Documentation
 
-This documentation is generated using `mkdocs` and `mkdocs-material`. The documentation is hosted on [Github Pages](https://radon-project.github.io/docs).
+This repository contains the MkDocs source for the public Radon documentation at [radon-project.github.io/docs](https://radon-project.github.io/docs).
 
-![https://github.com/radon-project/docs/actions/workflows/deploy.yaml/badge.svg](https://github.com/radon-project/docs/actions/workflows/deploy.yaml/badge.svg)
-![https://github.com/radon-project/docs/actions/workflows/tests.yaml/badge.svg](https://github.com/radon-project/docs/actions/workflows/tests.yaml/badge.svg)
+![Deploy workflow](https://github.com/radon-project/docs/actions/workflows/deploy.yaml/badge.svg)
+![Tests workflow](https://github.com/radon-project/docs/actions/workflows/tests.yaml/badge.svg)
 
 ## Local Development
 
-Follow the instractions for local development setup.
-
 ```bash
-# Clone the repo
+# Clone the repository
 git clone git@github.com:radon-project/docs.git radon-docs
-
-# cd into the directory
 cd radon-docs
 
-# Create virtual envirenment
-python3 -m venv .venv
-
-# Activate the virtual environment (Windows)
+# Create and activate a virtual environment
+python -m venv .venv
 .venv\Scripts\activate
 
-# Activate the virtual environment (Linux or MacOS)
-source .venv/bin/activate
-
-# Install requirements
+# Install documentation dependencies
 pip install -r requirements.txt
 
-# Run mkdocs server
+# Start the local docs server
 mkdocs serve
 ```
 
-# License
+The site will be available at `http://127.0.0.1:8000/`.
 
-This documentation is Licensed under [GNU GPL V3](LICENSE)
+## Scope
+
+- The source-based installation flow
+- The current CLI entrypoints in `radon.py`
+- The built-in functions exported by the interpreter
+- The modules currently shipped in `stdlib/`
+
+## License
+
+This documentation is licensed under [GNU GPL v3](LICENSE).

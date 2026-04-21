@@ -185,7 +185,7 @@ while i < 10 {
         break
     }
     print(i)
-    nonlocal i += 1
+    i += 1
 }
 ```
 
