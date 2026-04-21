@@ -10,10 +10,10 @@ condition is true. The `else` statement is optional.
 
 ```rn linenums="1" title="conditional-statements.rn"
 if true {
-  print("true")
+    print("true")
 
 } else {
-  print("false")
+    print("false")
 }
 ```
 

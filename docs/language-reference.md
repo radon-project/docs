@@ -19,8 +19,8 @@ Multi-line block comments are wrapped in `#!` … `!#`:
 
 ```rn
 #!
-	This is a
-	multi-line comment.
+    This is a
+    multi-line comment.
 !#
 var y = 2
 ```
@@ -109,9 +109,9 @@ without creating an instance. Instance access also works.
 
 ```rn
 class MathHelper {
-		static fun square(n) {
-				return n ^ 2
-		}
+    static fun square(n) {
+        return n ^ 2
+    }
 }
 
 print(MathHelper.square(5)) # 25
@@ -136,9 +136,9 @@ an array:
 
 ```rn
 fun sum(...nums) {
-		var total = 0
-		for n in nums { total += n }
-		return total
+    var total = 0
+    for n in nums { total += n }
+    return total
 }
 
 print(sum(1, 2, 3, 4)) # 10
@@ -162,9 +162,9 @@ hashmap:
 
 ```rn
 fun show(***kwargs) {
-		for key in kwargs {
-				print(key + " = " + str(kwargs[key]))
-		}
+    for key in kwargs {
+        print(key + " = " + str(kwargs[key]))
+    }
 }
 
 show(name="Alice", age=30)
@@ -179,11 +179,11 @@ variable is shared — mutations are visible:
 
 ```rn
 fun make_counter() {
-		var count = 0
-		return fun() {
-				count += 1
-				return count
-		}
+    var count = 0
+    return fun() {
+        count += 1
+        return count
+    }
 }
 
 const counter = make_counter()
@@ -297,8 +297,8 @@ signature.
 
 ```rn
 fun add(a, b) {
-		"Returns the sum of a and b."
-		return a + b
+    "Returns the sum of a and b."
+    return a + b
 }
 
 help(add)
