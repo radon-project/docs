@@ -2,7 +2,7 @@
 
 ## Conditional statements
 
-Conditional statements are used to execute code based on a condition. In Rain,
+Conditional statements are used to execute code based on a condition. In Radon,
 the `if` statement is used to execute code if a condition is true. The `else`
 statement is used to execute code if the condition is false. The `elif`
 statement is used to execute code if the condition is false and another

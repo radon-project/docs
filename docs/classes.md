@@ -67,7 +67,7 @@ class Person {
     }
 }
 
-person = Person("John", 20)
+const person = Person("John", 20)
 person.say_hello() # Output: Hello, John!
 ```
 

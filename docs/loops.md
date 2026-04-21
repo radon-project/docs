@@ -179,7 +179,7 @@ for i=0 to 10 {
 While loop example:
 
 ```rn linenums="1" title="while_break.rn"
-i = 0
+var i = 0
 while i < 10 {
     if i == 5 {
         break

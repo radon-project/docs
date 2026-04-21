@@ -74,7 +74,7 @@ print(arr1 * 2) # [1, 2, 3, 1, 2, 3]
 import array # Include the array standard library
 
 # Create an array instance using the Array class
-arr = array.Array([1, 2, 3, 4, 5])
+const arr = array.Array([1, 2, 3, 4, 5])
 
 print(len(arr)) # 5
 print(arr.is_empty()) # false

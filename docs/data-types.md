@@ -14,14 +14,14 @@ Arrays are declared using the `[]` syntax. The type of the array is the type
 of the elements it contains.
 
 ```rn linenums="1" title="arrays.rn"
-a = [1, 2, 3] # a is an array of numbers
-c = ["a", "b", "c"] # c is an array of strings
+var a = [1, 2, 3] # a is an array of numbers
+var c = ["a", "b", "c"] # c is an array of strings
 
 # Arrays can be nested
-d = [[1, 2], [3, 4]] # d is an array of arrays of ints
+var d = [[1, 2], [3, 4]] # d is an array of arrays of ints
 
 # Arrays can be empty
-e = [] # e is an empty array of unknown type
+var e = [] # e is an empty array of unknown type
 ```
 
 ## Hashmaps
