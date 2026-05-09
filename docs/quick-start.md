@@ -47,7 +47,7 @@ class Greeter {
 var name = io.Input.get_string("Name: ")
 var greeter = Greeter(name)
 greeter.greet()
-print("Name length: " + str(str_len(name)))
+print("Name length: " + str(name.length()))
 print("Even test: " + str(iseven(42)))
 ```
 

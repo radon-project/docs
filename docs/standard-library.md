@@ -20,16 +20,19 @@ stdlib/
 ## Module Overview
 
 - `argparser` provides a command-line parser implemented in Radon.
-- `array` provides an `Array` class with helpers such as `map`, `append`, `pop`, and `slice`.
+- `array` **[Legacy]** — Array methods are now built-in. This module is kept for backwards compatibility.
 - `colorlib` provides ANSI color and text-style helpers.
 - `io` provides `Input` and `Output` helpers, including password input.
 - `math` provides constants and functions such as `PI`, `sqrt`, `pow`, `factorial`, and `sin`.
 - `os` exposes filesystem and path helpers through the Python bridge.
 - `radiation` defines reusable error constructors such as `ValueError` and `TypeError`.
-- `string` provides a `String` class with utility methods and character-set constants.
+- `string` **[Legacy]** — String methods are now built-in. This module is kept for backwards compatibility.
 - `system` exposes basic system information.
 - `universe` is a small example-style module included with the distribution.
 - `winlib` exists as a placeholder Windows-specific module.
+
+!!! tip "Built-in Primitive Methods"
+    As of the latest release, all primitive types (Array, String, Number, Boolean, HashMap) have methods available via dot notation without any imports. See [Data Types](data-types.md) for the complete reference.
 
 ## Importing Modules
 

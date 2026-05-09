@@ -37,21 +37,6 @@ Radon exposes a fixed set of interpreter built-ins. The list below reflects the 
 - `is_fun(value)` returns whether the value is a function.
 - `is_null(value)` returns whether the value is null.
 
-## Array Helpers
-
-- `arr_append(array, value)` appends a value to an array.
-- `arr_pop(array, index=-1)` removes and returns an element.
-- `arr_extend(arrayA, arrayB)` appends all elements from one array to another.
-- `arr_chunk(array, size)` groups an array into chunks.
-- `arr_get(array, index)` returns the element at an index.
-- `arr_len(array)` returns the number of elements.
-
-## String Helpers
-
-- `str_len(string)` returns string length.
-- `str_find(string, value)` returns the index of a substring, or `-1`.
-- `str_get(string, index)` returns the character at an index.
-
 ## Runtime and Interop
 
 - `require(module)` executes a standard library module name or a `.rn` file path.
@@ -113,3 +98,45 @@ print(res.text)
 ### `builtins`
 
 Provides access to the built-in scope as an object. Used for reflection and tooling; not normally needed in application code.
+
+---
+
+## Primitive Methods
+
+All primitive types (Array, String, Number, Boolean, HashMap) support objective method syntax via dot notation. Methods are called directly on values without needing any imports.
+
+```rn linenums="1" title="primitive_methods.rn"
+# Array methods
+var arr = [1, 2, 3]
+arr.append(4)           # [1, 2, 3, 4]
+arr.length()            # 4
+arr.pop()               # removes and returns 4
+
+# String methods
+var s = "hello world"
+s.upper()               # "HELLO WORLD"
+s.split(" ")            # ["hello", "world"]
+s.length()              # 11
+
+# Number methods
+var n = 42
+n.is_even()             # true
+n.sqrt()                # 6.48...
+(-5).abs()              # 5
+
+# Boolean methods
+var b = true
+b.toggle()              # false
+b.to_string()           # "true"
+
+# HashMap methods
+var hm = {"a": 1, "b": 2}
+hm.keys()               # ["a", "b"]
+hm.has("a")             # true
+```
+
+For complete method references, see:
+
+- [Arrays](arrays.md) - 27 methods
+- [Strings](strings.md) - 25+ methods
+- [Data Types](data-types.md) - Number (28), Boolean (9), HashMap (18) methods
