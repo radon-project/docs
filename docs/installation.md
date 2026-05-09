@@ -1,48 +1,81 @@
 # Installation
 
-It's easy to install Radon on your computer. Just go to the
-[downloads page](https://radon-project.github.io "Downloads")
-and download the latest version for your operating system. Then, follow the
-instructions below for your operating system. If you have any problems, please
-[contact us](https://github.com/radon-project/radon/issues "Issues")
-and we'll help you out.
+Radon is currently easiest to run directly from source. The repository ships with the interpreter entrypoint in `radon.py`, example programs, tests, and the standard library.
 
-## Windows
+## Requirements
 
-To install Radon on Windows, just download the installer from the
-[downloads page](https://radon-project.github.io/#download "Downloads")
-and run it. Then, follow the instructions on the screen to install
-Radon on your computer.
+- Python 3.11 or newer
+- Git
 
-After setup you need to manually configure the PATH environment variable.
-To do this, open the Control Panel and go to System and
-Security > System > Advanced system settings > Environment Variables.
-Then, select the PATH variable and click Edit. Add the path to the Radon bin
-directory to the end of the variable value. For example, if you installed
-Radon in **C:\Program Files (x86)\Radon**, you would add
-**C:\Program Files (x86)\Radon** to the end of the variable value.
-Then, click OK to save the changes.
+## Clone the Repository
 
-**Quick tip:** You can also set the PATH variable from the command line.
-Just open a command prompt and type the following command:
-
-```bat linenums="1" title="Command prompt (Windows)"
-setx PATH "%PATH%;C:\Program Files (x86)\Radon"
+```bash
+git clone https://github.com/radon-project/radon.git
+cd radon
 ```
 
-Now, you can open a command prompt and type **radon** to run Radon.
-If you get an error message, try restarting your computer and trying again.
+## Run the REPL
 
-## macOS
+```bash
+python radon.py
+```
 
-Mac installer is not available yet.
-You can download the source code and build it yourself.
+When Radon starts, it prints the current interpreter version and documentation link, then opens the interactive shell.
 
-## Linux
+## Run a Script
 
-Linux installer is not available yet.
-You can download the source code and build it yourself.
+```bash
+python radon.py examples/simple.rn
+```
 
-<center>
-***Linux users don't need any instructions!!***
-</center>
+You can also run a one-off command:
+
+```bash
+python radon.py -c "print(1 + 2)"
+```
+
+## CLI Reference
+
+Radon currently supports these top-level CLI options:
+
+- `source_file` to run a `.rn` file
+- `-c`, `--command` to run inline Radon code
+- `-v`, `--version` to print the interpreter version
+- `-h`, `--help` to show usage information
+
+The repository also contains testing-oriented permission flags:
+
+- `-A`, `--allow-all`
+- `-D`, `--allow-disk`
+- `-P`, `--allow-py`
+- `-W`, `--allow-network`
+
+These bypass runtime permission prompts and are intended for testing rather than normal interactive use.
+
+## Optional REPL Enhancement
+
+For syntax highlighting and an improved REPL experience, install prompt_toolkit:
+
+```bash
+pip install prompt_toolkit
+```
+
+This enables:
+
+- **Live syntax highlighting** as you type
+- **Command history** with up/down arrows
+- **Auto-suggestions** from history
+
+The REPL works without it, but the experience is enhanced with prompt_toolkit installed.
+
+## Optional Python Environment
+
+If you want an isolated environment while working on Radon itself:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements-dev.txt
+```
+
+That setup is useful for development and linting, but not required just to run `radon.py`.

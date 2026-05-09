@@ -1,43 +1,44 @@
+/* Radon syntax highlight palette — mirrors radon-project.github.io token colors */
+/* !important needed on standard hljs class names to beat Material theme's bundled hljs CSS */
 .hljs-keyword {
-    color: #007acc;
-    /* Brighter shade for keywords */
-    font-style: italic;
+    color: #7dd3fc !important;
+    font-weight: 600;
 }
 
 .hljs-string {
-    color: #d14;
+    color: #a3e635 !important;
 }
 
 .hljs-number {
-    color: #c92c2c;
+    color: #fb923c !important;
 }
 
 .hljs-comment {
-    color: #6a737d;
-    /* Softer gray for comments */
+    color: #5c6591 !important;
     font-style: italic;
 }
 
-.hljs-function {
-    color: #795da3;
-    font-weight: bold;
+.hljs-operator {
+    color: #f87171 !important;
+}
+
+.hljs-function,
+.hljs-special {
+    color: #c084fc;
+}
+
+.hljs-builtin {
+    color: #34d399;
 }
 
 .hljs-identifier {
-    color: #2a7bde;
+    color: inherit;
 }
 
-.hljs-operator {
-    color: #8b7f7f;
-    font-weight: bold;
-}
-
-.hljs-special {
-    color: rgb(255, 187, 0);
-    font-weight: bold;
+.hljs-punctuation {
+    color: #94a3b8;
 }
 
 .hljs-fncall {
-    color: #1c92d2;
-    font-weight: bold;
+    color: #c084fc;
 }
