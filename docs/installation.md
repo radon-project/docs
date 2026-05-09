@@ -52,6 +52,22 @@ The repository also contains testing-oriented permission flags:
 
 These bypass runtime permission prompts and are intended for testing rather than normal interactive use.
 
+## Optional REPL Enhancement
+
+For syntax highlighting and an improved REPL experience, install prompt_toolkit:
+
+```bash
+pip install prompt_toolkit
+```
+
+This enables:
+
+- **Live syntax highlighting** as you type
+- **Command history** with up/down arrows
+- **Auto-suggestions** from history
+
+The REPL works without it, but the experience is enhanced with prompt_toolkit installed.
+
 ## Optional Python Environment
 
 If you want an isolated environment while working on Radon itself:
