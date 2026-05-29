@@ -18,7 +18,7 @@
         <link rel="prev" href="functions.html">
       
       
-        <link rel="next" href="modules.html">
+        <link rel="next" href="magic-methods.html">
       
       
       <link rel="icon" href="assets/images/favicon.ico">
@@ -621,6 +621,27 @@
   
   
     <li class="md-nav__item">
+      <a href="magic-methods.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Magic Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="modules.html" class="md-nav__link">
         
   
@@ -1144,6 +1165,12 @@ the return type. The parameters and the return type are optional.</p>
 <td><code>var foo = create(Foo); foo.__constructor(1, 2, 3)</code><sup id="fnref:create_func"><a class="footnote-ref" href="#fn:create_func">1</a></sup></td>
 </tr>
 <tr>
+<td><code>__destructor__</code></td>
+<td>Object deletion</td>
+<td><code>del foo</code></td>
+<td><code>foo.__destructor__(); delete(foo)</code><sup id="fnref:delete_func"><a class="footnote-ref" href="#fn:delete_func">2</a></sup></td>
+</tr>
+<tr>
 <td><code>__add__</code></td>
 <td>Addition</td>
 <td><code>a + b</code></td>
@@ -1213,7 +1240,7 @@ the return type. The parameters and the return type are optional.</p>
 <td><code>__truthy__</code></td>
 <td>Implicit conversions to bool</td>
 <td><code>if x { ... }</code></td>
-<td><code>if x.__truthy__() { ... }</code><sup id="fnref:truthy_errors"><a class="footnote-ref" href="#fn:truthy_errors">2</a></sup><sup id="fnref:truthy_recursion"><a class="footnote-ref" href="#fn:truthy_recursion">3</a></sup></td>
+<td><code>if x.__truthy__() { ... }</code><sup id="fnref:truthy_errors"><a class="footnote-ref" href="#fn:truthy_errors">3</a></sup><sup id="fnref:truthy_recursion"><a class="footnote-ref" href="#fn:truthy_recursion">4</a></sup></td>
 </tr>
 </tbody>
 </table>
@@ -1223,11 +1250,14 @@ the return type. The parameters and the return type are optional.</p>
 <li id="fn:create_func">
 <p><code>create</code> doesn't actually exist. It's just pseudocode&#160;<a class="footnote-backref" href="#fnref:create_func" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
+<li id="fn:delete_func">
+<p><code>delete</code> doesn't actually exist. It's just pseudocode showing the destructor is called before the variable is removed&#160;<a class="footnote-backref" href="#fnref:delete_func" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
 <li id="fn:truthy_errors">
-<p>If <code>__truthy__</code> throws an error, it is ignored and treated as if it returned <code>false</code>&#160;<a class="footnote-backref" href="#fnref:truthy_errors" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>If <code>__truthy__</code> throws an error, it is ignored and treated as if it returned <code>false</code>&#160;<a class="footnote-backref" href="#fnref:truthy_errors" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:truthy_recursion">
-<p>The <code>__truthy__</code> operator of the returned object will be called recursively until it is a <code>bool</code>&#160;<a class="footnote-backref" href="#fnref:truthy_recursion" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>The <code>__truthy__</code> operator of the returned object will be called recursively until it is a <code>bool</code>&#160;<a class="footnote-backref" href="#fnref:truthy_recursion" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
