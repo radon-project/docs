@@ -117,6 +117,7 @@ nav:
     - Loops: loops.md
     - Functions: functions.md
     - Classes: classes.md
+    - Magic Methods: magic-methods.md
     - Modules: modules.md
     - Strings: strings.md
     - Arrays: arrays.md
