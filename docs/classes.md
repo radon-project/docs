@@ -77,6 +77,7 @@ You may have noticed we declared a method called `__constructor__` in the above 
 | Method Name | Operator | Example | Example if we used regular function calls instead of operators |
 |-------------|----------|---------|----------------------------------------------------------------|
 `__constructor__` | Class instantiation | `var foo = Foo(1, 2, 3)` | `var foo = create(Foo); foo.__constructor(1, 2, 3)`[^create_func] |
+`__destructor__` | Object deletion | `del foo` | `foo.__destructor__(); delete(foo)`[^delete_func] |
 `__add__` | Addition | `a + b` | `a.__add__(b)` |
 `__sub__` | Subtraction | `a - b` | `a.__sub__(b)` |
 `__mul__` | Multiplication | `a * b` | `a.__mul__(b)` |
@@ -92,5 +93,6 @@ You may have noticed we declared a method called `__constructor__` in the above 
 
 
 [^create_func]: `create` doesn't actually exist. It's just pseudocode
+[^delete_func]: `delete` doesn't actually exist. It's just pseudocode showing the destructor is called before the variable is removed
 [^truthy_errors]: If `__truthy__` throws an error, it is ignored and treated as if it returned `false`
 [^truthy_recursion]: The `__truthy__` operator of the returned object will be called recursively until it is a `bool`
