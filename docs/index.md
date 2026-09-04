@@ -40,6 +40,7 @@ The current repository ships with:
 - Inline execution with `python radon.py -c 'print("hello")'`
 - Dynamic types including numbers, strings, booleans, arrays, hash maps, and null
 - Functions, classes, methods, modules, and `from ... import ...` support
+- Full object-oriented programming: inheritance (single, multiple, multilevel, hybrid) with `super()`, enforced `public`/`private`/`protected` access modifiers, and abstract classes
 - A Radon standard library in `stdlib/`
 - A Python bridge through `pyapi()` with runtime permission prompts
 
