@@ -118,6 +118,7 @@ nav:
     - Functions: functions.md
     - Classes: classes.md
     - Magic Methods: magic-methods.md
+    - Async and Concurrency: async.md
     - Modules: modules.md
     - Strings: strings.md
     - Arrays: arrays.md

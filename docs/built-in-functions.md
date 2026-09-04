@@ -37,6 +37,28 @@ Radon exposes a fixed set of interpreter built-ins. The list below reflects the 
 - `is_fun(value)` returns whether the value is a function.
 - `is_null(value)` returns whether the value is null.
 
+## Concurrency
+
+- `spawn(callable)` schedules a zero-argument callable to run concurrently in the background and returns a `Task` immediately, without waiting for it to finish.
+- `sleep(seconds)` suspends the current async task for the given number of seconds without blocking anything else that's running concurrently. Must be used with `await`.
+- `gather(tasks)` takes an array of `Task` values (from `spawn()`) and waits for all of them concurrently, returning an array of their results in the same order. If any task raised an error, `gather()` raises that error.
+
+```rn linenums="1" title="concurrency.rn"
+async fun fetch(id) {
+    await sleep(0.1)
+    return "result-" + str(id)
+}
+
+var t1 = spawn(fun() -> fetch(1))
+var t2 = spawn(fun() -> fetch(2))
+
+var results = await gather([t1, t2]) # both run concurrently
+print(results) # ["result-1", "result-2"]
+```
+
+See [Async and Concurrency](async.md) for the full guide, including a
+worked example measuring the actual speedup over sequential code.
+
 ## Runtime and Interop
 
 - `require(module)` executes a standard library module name or a `.rn` file path.

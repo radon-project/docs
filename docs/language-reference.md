@@ -154,7 +154,7 @@ key-value pairs:
 ```rn
 var defaults = {"color": "blue", "size": 10}
 var overrides = {***defaults, "color": "red"}
-print(overrides) # {"color": "red", "size": 10}
+print(overrides) # {'color': "red", 'size': 10}
 ```
 
 In function definitions, `***name` collects extra keyword arguments into a

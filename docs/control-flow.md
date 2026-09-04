@@ -132,10 +132,14 @@ try {
 }
 ```
 
-`del` also works on indexed targets:
+`del` also works on indexed targets — array elements and hash map keys:
 
 ```rn linenums="1" title="del-index.rn"
 var arr = [10, 20, 30]
 del arr[1]
 print(arr) # [10, 30]
+
+var hm = {"a": 1, "b": 2}
+del hm["a"]
+print(hm) # {'b': 2}
 ```

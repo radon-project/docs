@@ -71,6 +71,179 @@ const person = Person("John", 20)
 person.say_hello() # Output: Hello, John!
 ```
 
+## Inheritance
+
+A class can inherit from one or more parent classes by listing them in
+parentheses after the class name. The child class gets access to every
+method the parent(s) define, and can override any of them.
+
+```rn linenums="1" title="inheritance.rn"
+class Animal {
+    fun __constructor__(name) {
+        this.name = name
+    }
+
+    fun speak() -> this.name + " makes a sound."
+}
+
+class Dog(Animal) {
+    fun speak() -> this.name + " barks."
+}
+
+const dog = Dog("Rex")
+print(dog.speak()) # Rex barks.
+```
+
+### `super()`
+
+Inside a method, `super()` gives you access to the parent's version of a
+method — most commonly used in a constructor to let the parent initialize
+its own fields before the child adds its own.
+
+```rn linenums="1" title="super.rn"
+class Vehicle {
+    fun __constructor__(wheels) {
+        this.wheels = wheels
+    }
+}
+
+class Car(Vehicle) {
+    fun __constructor__(brand) {
+        super().__constructor__(4)
+        this.brand = brand
+    }
+}
+
+const car = Car("Toyota")
+print(car.wheels) # 4
+print(car.brand)  # Toyota
+```
+
+### Multiple, multilevel, and hybrid inheritance
+
+Radon supports every common shape of inheritance:
+
+```rn linenums="1" title="inheritance_shapes.rn"
+# Multiple: one class, several direct parents
+class Flyer {
+    fun move() -> "flies"
+}
+class Swimmer {
+    fun dive() -> "dives"
+}
+class Duck(Flyer, Swimmer) {}
+
+# Multilevel: a chain of classes
+class Grandparent {
+    fun greet() -> "Hello from Grandparent"
+}
+class Parent(Grandparent) {}
+class Child(Parent) {}
+
+print(Duck().move())          # flies
+print(Child().greet())        # Hello from Grandparent
+```
+
+When a class inherits from multiple parents that share a common ancestor
+(hybrid inheritance), Radon resolves method lookup and `super()` chains
+using a C3-style linearization of the class hierarchy (the same technique
+Python uses), so method resolution order stays consistent and predictable
+even in diamond-shaped hierarchies.
+
+---
+
+## Access Modifiers
+
+Methods can be marked `public`, `private`, or `protected`. These aren't
+just documentation — they're enforced at runtime:
+
+- **`public`** (the default when no modifier is given) — accessible from
+  anywhere.
+- **`private`** — accessible only from code running inside the exact class
+  that declared the method. Not even subclasses can call it, including
+  through `super()`.
+- **`protected`** — accessible from the declaring class and anywhere in
+  its subclass hierarchy (in both directions: a subclass can call an
+  inherited protected method, and a base class's own method can call a
+  subclass's protected override — the standard Template Method pattern).
+
+```rn linenums="1" title="access_modifiers.rn"
+class Account {
+    fun __constructor__(balance) {
+        this.balance = balance
+    }
+
+    public fun display() -> "Balance: " + str(this.balance)
+    private fun pin() -> 1234
+    protected fun apply_interest(rate) -> this.balance * rate
+}
+
+class Savings(Account) {
+    public fun bonus_interest() -> this.apply_interest(0.05) # OK: protected, inherited
+}
+
+const account = Savings(1000)
+print(account.display())          # Balance: 1000
+print(account.bonus_interest())   # 50.0
+
+account.pin() # RuntimeError: Cannot access private member 'pin' of class 'Account' ...
+```
+
+Attempting to access a `private` or `protected` member from outside its
+allowed hierarchy raises a `RuntimeError` immediately — the same as any
+other runtime error, so you can catch it with `try`/`catch` if needed.
+
+---
+
+## Abstract Classes
+
+An `abstract class` cannot be instantiated directly — it exists to be
+subclassed. A method with no body (no `{ }` block and no `->` expression)
+declares an abstract method: a contract that every concrete (non-abstract)
+subclass must implement.
+
+```rn linenums="1" title="abstract_classes.rn"
+abstract class Shape {
+    fun area()      # no body -- this is abstract
+    fun perimeter() # also abstract
+
+    fun describe() -> "This shape has an area of " + str(this.area())
+}
+
+class Circle(Shape) {
+    fun __constructor__(radius) {
+        this.radius = radius
+    }
+
+    fun area() -> this.radius * this.radius * 3.14159
+    fun perimeter() -> 2 * 3.14159 * this.radius
+}
+
+print(Circle(2).describe()) # This shape has an area of 12.56636
+
+Shape() # RuntimeError: Cannot instantiate abstract class 'Shape'
+```
+
+If a subclass doesn't implement every abstract method it inherits, that's
+caught immediately when the subclass is defined — not later when you try
+to use it:
+
+```rn linenums="1" title="incomplete_subclass.rn"
+class Broken(Shape) {
+    fun area() -> 0
+    # perimeter() is still missing
+}
+# RuntimeError: Class 'Broken' must implement abstract method(s): perimeter
+```
+
+An abstract class can itself inherit from another abstract class without
+implementing its methods — only the first *concrete* class in the chain
+needs to fill in every abstract method. Abstract classes can also mix
+regular methods, `static` methods, and access modifiers freely alongside
+abstract method declarations.
+
+---
+
 ## Magic Methods/Operator Overloading
 You may have noticed we declared a method called `__constructor__` in the above example. This is an example of a magic method. Magic methods are used for operator overloading. Here is an incomplete list:
 

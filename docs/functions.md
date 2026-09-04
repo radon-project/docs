@@ -95,3 +95,25 @@ sum(1, 2, 3) # Output: 6
 sum(1, 2, 3, 4) # Output: 10
 sum() # Output: 0
 ```
+
+## Async functions
+
+A function declared with `async fun` may contain `await` expressions.
+Calling an async function still runs it to completion immediately, just
+like a regular function — `async` by itself doesn't introduce concurrency.
+
+```rn linenums="1" title="async_basic.rn"
+async fun fetch_greeting(name) {
+    await sleep(0.1) # simulate work that takes time
+    return "Hello, " + name + "!"
+}
+
+print(await fetch_greeting("World")) # Hello, World!
+```
+
+`await` is legal inside an `async fun` body and at a script's top level,
+but is a syntax error inside a plain (non-async) `fun`.
+
+Real concurrency — running multiple things at once instead of one after
+another — comes from the `spawn()`/`gather()` built-ins, covered in full
+in [Async and Concurrency](async.md).
